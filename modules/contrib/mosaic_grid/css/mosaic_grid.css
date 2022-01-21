@@ -1,0 +1,70 @@
+.mosaic-grid-item {
+  margin: 3px;
+  float: left;
+  box-sizing: content-box;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.1);
+  border: unset;
+}
+
+.mosaic-grid-item img, video {
+  margin: 0;
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.mosaic-grid-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+}
+
+.mosaic-grid-overlay {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0px; right: 0px; top: 0px; bottom: 0px;
+  pointer-events: none;
+  z-index: 101;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.mosaic-grid-caption {
+  display: table;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  z-index: 102;
+  background: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.mosaic-grid-item:hover > .mosaic-grid-overlay {
+  opacity: 1;
+}
+
+.mosaic-grid-caption > * {
+  display: table-cell;
+  padding: 0.5em;
+}
+
+.mosaic-grid-empty {
+  text-align: center;
+  margin-top: 45%;
+  width: 100%;
+  color: red;
+}
+
+/* hide captions on small and touch screens */
+@media only screen and (max-width: 992px), (any-hover: none) {
+  .mosaic-grid-hide-mobile {
+    display: none;
+  }
+}

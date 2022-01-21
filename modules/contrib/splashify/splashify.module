@@ -1,0 +1,109 @@
+<?php
+
+/**
+ * @file
+ * The main file for the module.
+ */
+
+require_once 'splashify.display.inc';
+
+/**
+ * Implements hook_config_info().
+ */
+function splashify_config_info() {
+  $prefixes['splashify.settings'] = array(
+    'label' => t('Splashify settings'),
+    'group' => t('Configuration'),
+  );
+  return $prefixes;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function splashify_menu() {
+  $items = array();
+
+  // If they specify What: Enter Text or What: Text Full Screen, this is the
+  // page that will come up.
+  $items['splashify-splash'] = array(
+    'title' => 'Splash',
+    'page callback' => 'splashify_display_splashtext',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  // Load a node via AJAX.
+  $items['_splashify_ajax'] = array(
+    'title' => 'AJAX Splash',
+    'page callback' => 'splashify_display_ajax',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  // Define the admin area.
+  $items['admin/config/system/splashify'] = array(
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('splashify_admin_when_form'),
+    'title' => 'Splashify',
+    'description' => t('Configuration area for the Splashify system.'),
+    'file' => 'admin/splashify.admin.when.inc',
+    'type' => MENU_NORMAL_ITEM,
+    'access arguments' => array('access splashify admin'),
+    'weight' => 6,
+  );
+
+  $items['admin/config/system/splashify/when'] = array(
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('splashify_admin_when_form'),
+    'title' => 'When',
+    'file' => 'admin/splashify.admin.when.inc',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'access arguments' => array('access splashify admin'),
+    'weight' => 6,
+  );
+
+  $items['admin/config/system/splashify/where'] = array(
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('splashify_admin_where_form'),
+    'title' => 'Where',
+    'file' => 'admin/splashify.admin.where.inc',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('access splashify admin'),
+    'weight' => 8,
+  );
+
+  $items['admin/config/system/splashify/what'] = array(
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('splashify_admin_what_form'),
+    'title' => 'What',
+    'file' => 'admin/splashify.admin.what.inc',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('access splashify admin'),
+    'weight' => 10,
+  );
+
+  $items['admin/config/system/splashify/how'] = array(
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('splashify_admin_how_form'),
+    'title' => 'How',
+    'file' => 'admin/splashify.admin.how.inc',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('access splashify admin'),
+    'weight' => 12,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function splashify_permission() {
+  return array(
+    'access splashify admin' => array(
+      'title' => t('Administer Splashify'),
+      'description' => t('Access the admin area for the Splashify module.'),
+    ),
+  );
+}

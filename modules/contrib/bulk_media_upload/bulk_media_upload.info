@@ -1,0 +1,12 @@
+name = Bulk Media Upload
+backdrop = 1.x
+package = Media
+description = With Bulk Media Upload you can upload a bunch of media files and a new node will be created for every file.
+type = module
+configure = admin/config/media/bulk_media_upload
+dependencies[] = plupload
+
+; Added by Backdrop CMS packaging script on 2019-06-28
+project = bulk_media_upload
+version = 1.x-1.0.3
+timestamp = 1561789405

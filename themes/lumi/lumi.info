@@ -1,0 +1,17 @@
+name = Lumi
+description = A modern, customisable admin theme for Backdrop.
+type = theme
+backdrop = 1.x
+base theme = seven
+
+stylesheets[all][] = css/lumi.css
+scripts[] = js/lumi.js
+
+settings[dark] = false
+settings[primary] = blue
+settings[links] = green
+
+; Added by Backdrop CMS packaging script on 2021-01-07
+project = lumi
+version = 1.x-1.1.0
+timestamp = 1610018323

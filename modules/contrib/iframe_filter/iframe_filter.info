@@ -1,0 +1,11 @@
+name = iframe Filter
+description = Filter that converts content into an iframe and includes the result.
+package = Layout
+type = module
+backdrop = 1.x
+configure = admin/config/content/formats
+
+; Added by Backdrop CMS packaging script on 2018-03-05
+project = iframe_filter
+version = 1.x-1.1.0
+timestamp = 1520319997

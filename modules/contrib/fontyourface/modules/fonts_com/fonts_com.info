@@ -1,0 +1,14 @@
+name = Fonts.com
+description = @font-your-face provider of fonts from Fonts.com.
+dependencies[] = fontyourface
+package = @font-your-face
+backdrop = 1.x
+type = module
+php = 5.2.0
+
+files[] = api.inc
+
+; Added by Backdrop CMS packaging script on 2021-03-04
+project = fontyourface
+version = 1.x-2.8.0
+timestamp = 1614888792

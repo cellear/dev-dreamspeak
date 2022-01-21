@@ -1,0 +1,12 @@
+name = Splashify
+description = Display a splash page anywhere on the site.
+backdrop = 1.x
+type = module
+configure = admin/config/system/splashify
+dependencies[] = jstorage
+dependencies[] = mobile_detect
+
+; Added by Backdrop CMS packaging script on 2020-08-11
+project = splashify
+version = 1.x-1.3.4
+timestamp = 1597206213

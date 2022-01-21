@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Removes fonts on disable.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function local_fonts_enable() {
+
+  // Set weight to 1 to ensure local_fonts_preprocess_page() is executed after
+  // fontyourface_preprocess_page(), which has weight of 0.
+  db_update('system')
+    ->fields(array('weight' => 1))
+    ->condition('name', 'local_fonts')
+    ->execute();
+
+} // local_fonts_enable
+
+/**
+ * Implements hook_disable().
+ */
+function local_fonts_disable() {
+
+  fontyourface_provider_disable('local_fonts');
+
+} // local_fonts_disable

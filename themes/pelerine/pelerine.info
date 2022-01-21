@@ -1,0 +1,30 @@
+name = Pelerine
+description = Dress up your website with a fancy cape.
+type = theme
+backdrop = 1.x
+
+stylesheets[all][] = css/component/backdrop-form.css
+stylesheets[all][] = css/component/caption.css
+stylesheets[all][] = css/component/comment.css
+stylesheets[all][] = css/component/fieldset.css
+stylesheets[all][] = css/component/hero.css
+stylesheets[all][] = css/component/menu-dropdown.css
+stylesheets[all][] = css/component/pager.css
+stylesheets[all][] = css/component/tabs.css
+stylesheets[all][] = css/component/search.css
+stylesheets[all][] = css/component/vertical-tabs.css
+stylesheets[all][] = css/component/tabledrag.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/capes.css
+
+ckeditor_stylesheets[] = css/editor.css
+ckeditor_stylesheets[] = css/component/caption.css
+
+settings[bodyclass] = 'green-stripes'
+settings[image_url] = 'themes/pelerine/backgrounds/green-stripes.jpg'
+settings[use_custom_css] = FALSE
+
+; Added by Backdrop CMS packaging script on 2021-02-05
+project = pelerine
+version = 1.x-1.0.6
+timestamp = 1612543648

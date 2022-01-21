@@ -1,0 +1,9 @@
+name = jStorage
+description = Simple wrapper for the jStorage library to make it available to other modules.
+backdrop = 1.x
+type = module
+
+; Added by Backdrop CMS packaging script on 2017-09-06
+project = jstorage
+version = 1.x-1.0.1
+timestamp = 1504732510

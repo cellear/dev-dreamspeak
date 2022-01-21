@@ -1,0 +1,12 @@
+name = AudioField
+description = Handle audio upload using fields.
+package = Fields
+type = module
+backdrop = 1.x
+dependencies[] = file
+configure = admin/config/media/audiofield
+
+; Added by Backdrop CMS packaging script on 2017-02-26
+project = audiofield
+version = 1.x-1.2.0
+timestamp = 1488110340

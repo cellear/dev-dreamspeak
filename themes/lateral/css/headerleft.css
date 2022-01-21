@@ -1,0 +1,116 @@
+.l-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 33;
+  min-height: 100%;
+  width: 22vw;
+}
+.l-wrapper,
+.l-footer,
+.layout-flexible-content {
+  margin-left: 22vw;
+}
+.layout--flexible .l-footer {
+  margin-left: 0;
+}
+.js .menu-dropdown > li {
+  float: none;
+}
+.l-header-inner,
+.layout--flexible .l-header .row,
+.layout--flexible .l-header .l-col {
+  margin: 0;
+  padding: 0;
+}
+.l-header-scrollable {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+.l-wrapper-inner,
+.l-header-inner {
+  position: relative;
+}
+.l-header .menu a.active::after {
+  left: 0;
+}
+.header-identity-wrapper {
+  display: block;
+  float: none;
+  padding: 1em 0;
+}
+.header-site-name-wrapper {
+  float: none;
+}
+.menu-toggle-button {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .menu-toggle-button {
+    display: block;
+    text-align: right;
+    opacity: 0.9;
+  }
+  .l-header {
+    width: 290px;
+    bottom: 0;
+    left: -270px;
+    transition: left 0.3s;
+    box-shadow: 5px 0 10px #0001;
+  }
+  .l-header .l-header-scrollable {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .l-header.nav-visible {
+    left: 0;
+    transition: left 0.3s;
+  }
+  .l-header.nav-visible .l-header-scrollable {
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .l-header .menu-toggle-button {
+    width: 42px;
+    height: 42px;
+    margin: -21px 0 0;
+    padding: 0;
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    border-radius: 4px;
+  }
+  .menu-toggle-button-text {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 9px auto 0;
+    font-size: 1px;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+  .menu-toggle-button-text::before {
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 6px;
+    margin: 6px auto 0;
+  }
+  .nav-visible .menu-toggle-button-text {
+    display: inline-block;
+    text-indent: 200px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    margin: 8px 3px 0 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .l-wrapper,
+  .l-footer,
+  .layout-flexible-content {
+    width: auto;
+    margin-left: 20px;
+  }
+}

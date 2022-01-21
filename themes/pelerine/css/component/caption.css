@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Caption styles.
+ */
+.caption {
+  display: table;
+  max-width: 100%;
+  margin: 1em 0;
+}
+.caption > * {
+  display: block;
+  max-width: 100%;
+  border: none;
+}
+.caption > figcaption {
+  padding: 0.3em 0.5em;
+  text-align: center;
+  font-size: 0.9em;
+  background-color: #f7f7f7;
+}
+figure.align-left {
+  margin: 0.2em 2em .4em 0;
+}
+figure.align-right {
+  margin: 0.2em 0 .4em 2em;
+}

@@ -1,0 +1,10 @@
+name = Plupload integration module
+description = Provides a plupload element.
+backdrop = 1.x
+package = Media
+type = module
+
+; Added by Backdrop CMS packaging script on 2019-07-05
+project = plupload
+version = 1.x-1.7.3
+timestamp = 1562392475

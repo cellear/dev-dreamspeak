@@ -1,0 +1,18 @@
+name = Lateral
+description = Highly configurable theme with header on left or right side.
+type = theme
+backdrop = 1.x
+
+stylesheets[all][] = css/base.css
+stylesheets[all][] = css/colors.css
+stylesheets[screen][] = css/maintenance.css
+
+scripts[] = js/helper.js
+
+settings[header_position] = 'left'
+settings[font] = 'opensans'
+
+; Added by Backdrop CMS packaging script on 2021-02-05
+project = lateral
+version = 1.x-1.0.4
+timestamp = 1612541710

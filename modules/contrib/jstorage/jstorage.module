@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * This module does nothing on its own besides providing the jStorage library. 
+ * You only need to install it if another module requires it. 
+ */
+ 
+/**
+ * Implements hook_library_info().
+ */
+function jstorage_library_info() {
+  $libraries['jstorage'] = array(
+    'title' => 'jStorage',
+    'website' => 'https://github.com/andris9/jStorage',
+    'version' => '0.4.12',
+    'js' => array(
+      backdrop_get_path('module', 'jstorage') . '/library/jstorage.min.js' => array(),
+    ),
+  );
+  return $libraries;
+}

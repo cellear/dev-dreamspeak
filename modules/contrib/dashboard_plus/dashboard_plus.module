@@ -1,0 +1,36 @@
+
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function dashboard_plus_block_info() {
+  $blocks['backdrop_resources'] = array(
+    'info' => t('Dashboard Plus - Resources'),
+    'description' => t('Some links to important resources for Backdrop CMS users'),
+  );
+  $blocks['manage_content'] = array(
+    'info' => t('Dashboard Plus - Manage content'),
+    'description' => t('Provides links to manage content'),
+    'class' => 'DashboardManageContentBlock',
+  );
+  return $blocks;
+}
+
+function dashboard_plus_block_view() {
+  $block['subject'] = 'Backdrop CMS Resources';
+  $block['content'] = '<li><a target="_blank" href="https://forum.backdropcms.org">Ask A Question</a> - Backdrop CMS Forums</li>';
+  $block['content'] .= '<li><a target="_blank" href="https://backdropcms.org/user-guide">Learn about Backdrop CMS</a> - User Guide</li>';
+  $block['content'] .= '<li><a target="_blank" href="https://github.com/backdrop/backdrop-issues/issues">Report a bug</a> - Backdrop CMS Core Issue Queue</li>';
+  return $block;
+}
+
+/**
+ * Implements hook_autoload_info().
+ */
+function dashboard_plus_autoload_info() {
+  return array(
+    'DashboardManageContentBlock' => 'includes/block.manage_content.inc',
+
+  );
+}

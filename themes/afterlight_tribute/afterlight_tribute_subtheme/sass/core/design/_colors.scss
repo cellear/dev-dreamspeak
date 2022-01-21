@@ -1,0 +1,412 @@
+/*
+* Colours go in this file
+*/
+@charset 'utf-8';
+
+body {
+  background: $darkgrey;
+}
+
+a,
+li a.active {
+  color: $base-link-color;
+}
+
+.l-header ul.menu li a,
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading,
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary,
+.button-error,
+.danger,
+#edit-cancel,
+.button-secondary,
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  color: $white;
+}
+
+.l-container,
+body .l-header ul.menu li a.active,
+.l-header ul.menu li.active-trail a {
+  background-color: transparent;
+}
+
+.comment .comment-arrow {
+  border-color: $white;
+}
+
+kbd {
+  color: #666;
+}
+
+blockquote:before,
+blockquote:after {
+  color: $lightgrey;
+}
+
+table tr th {
+  border-bottom-style: none;
+  background: $realblack;
+}
+
+td.active {
+  background: transparent;
+}
+
+#skip-link a:visited {
+  color: $white;
+  background: $black;
+  background: rgba(0, 0, 0, .6);
+}
+
+.tabs ul.primary li.active a,
+.js .dropbutton-widget,
+.js .dropbutton-multiple.open .dropbutton-widget:hover,
+.custom-menu-toggle .bar,
+.l-header #mobile-menu li.active-trail a {
+  background-color: transparent;
+}
+
+.l-header .form-text {
+  color: $realblack;
+  border-color: $lightgrey;
+  border-color: rgba(255, 255, 255, .3);
+}
+
+.l-header .form-text:hover,
+.l-header .form-text:focus,
+.l-header .form-text:active {
+  color: $realblack;
+  background: $white;
+}
+
+.l-header .form-required {
+  color: $white;
+  color: $black;
+}
+
+.unpublished .comment-text .comment-arrow {
+  border-right: 1px solid #fff4f4;
+  border-left: 1px solid #fff4f4;
+}
+
+header.l-header,
+.l-header ul.menu li a.active,
+.l-header ul.menu li.active-trail a,
+.header-menu a {
+  color: $white;
+  background: transparent;
+}
+
+.gn-menu-main {
+  background: transparent !important;
+}
+
+.gn-trigger {
+  background: $white !important;
+}
+
+#main-menu li a.active {
+  border-bottom: 1px solid #9daca9;
+}
+
+.block-system-main-menu ul.menu li {
+  background: transparent !important;
+}
+
+.responsive-menus-simple li a {
+  border-bottom: 0 solid !important;
+}
+
+.block-system-main-menu,
+.l-header ul.menu li,
+.block-system-header {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $white;
+}
+
+.l-header .block-system-main-menu ul.menu li:hover a,
+.block-system-main-menu ul.menu li:focus a,
+.l-header .block-system-main-menu ul.menu li:hover ul.menu a,
+.block-system-main-menu ul.menu li:focus ul.menu a,
+.l-header .block-system-main-menu ul.menu li:hover ul.menu li a,
+.block-system-main-menu ul.menu li:focus ul.menu li a {
+  color: $realblack !important;
+}
+
+.l-header .block-system-main-menu ul.menu li:hover ul.menu,
+.block-system-main-menu ul.menu li:focus ul.menu,
+.l-header .block-system-main-menu ul.menu li:hover ul.menu li,
+.block-system-main-menu ul.menu li:focus ul.menu li {
+  background: $lightgrey !important;
+}
+
+.l-header .block-system-main-menu ul.menu li:hover,
+.block-system-main-menu ul.menu li:focus,
+.l-header .block-system-main-menu ul.menu li:hover ul.menu,
+.block-system-main-menu ul.menu li:focus ul.menu,
+.l-header .block-system-main-menu ul.menu li ul.menu li:hover,
+.block-system-main-menu ul.menu li ul.menu li:focus {
+  background: $white !important;
+}
+
+.view-mode-teaser h2 a {
+  color: #181818;
+}
+
+article .link-wrapper ul.links {
+  color: #68696b;
+}
+
+.comment .submitted .comment-time {
+  color: #68696b;
+}
+
+.l-triptych-wrapper {
+  background: rgba(30, 50, 10, .08);
+  background-color: #f0f0f0;
+}
+
+.l-triptych h2 {
+  color: $black;
+}
+
+.l-footer-columns,
+.l-footer {
+  color: #c0c0c0;
+  color: rgba(255, 255, 255, .65);
+  background-color: $black;
+}
+
+.l-footer-columns a,
+.l-footer a {
+  color: #fcfcfc;
+  color: rgba(255, 255, 255, .8);
+}
+
+.l-footer-columns a:hover,
+.l-footer-columns a:focus,
+.l-footer a:hover,
+.l-footer a:focus {
+  color: $white;
+}
+
+.l-footer-columns li a:hover,
+.l-footer-columns li a:focus,
+.l-footer li a:hover,
+.l-footer li a:focus {
+  background-color: #1f1f21;
+  background-color: rgba(255, 255, 255, .05);
+}
+
+.l-footer-columns li a.active {
+  color: $white;
+}
+
+.l-footer-columns h2,
+.l-footer h2 {
+  border-color: rgba(255, 255, 255, .15);
+  border-bottom: 1px solid $darkgrey;
+}
+
+.l-footer-columns li a,
+.l-footer li a {
+  border-color: rgba(255, 255, 255, .15);
+  border-bottom: 1px solid $darkgrey;
+}
+
+.l-footer .section {
+  border-color: rgba(255, 255, 255, .15);
+  border-top: 1px solid $darkgrey;
+}
+
+.l-footer .menu li a {
+
+  /* LTR */
+  border-color: rgba(255, 255, 255, .15);
+  border-right: 1px solid $darkgrey;
+}
+
+[dir='rtl'] .l-footer .menu li a {
+  border-right: none;
+  border-left: 1px solid $darkgrey;
+}
+
+.l-footer-wrapper tr.odd {
+  background-color: transparent;
+}
+
+.l-footer-wrapper tr.even {
+  background-color: $lightgrey;
+  background-color: rgba(0, 0, 0, .15);
+}
+
+.tabs ul.primary li.active a {
+  color: $white;
+  background-color: $realblack;
+}
+
+.tabs ul.primary li a {
+  color: $white;
+  border: 1px solid $darkgrey;
+  background-color: transparent;
+}
+
+fieldset legend {
+  color: #3b3b3b;
+  background: #dbdbdb;
+}
+
+fieldset legend a {
+  color: #3b3b3b;
+}
+
+fieldset legend a:hover,
+fieldset legend a:focus,
+fieldset legend a:active {
+  color: $black;
+}
+
+fieldset .fieldset-description,
+fieldset {
+  color: #3c3c3c;
+}
+
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-color,
+input.form-number,
+input.form-search,
+textarea.form-textarea,
+select.form-select {
+  color: $realblack;
+  border: 1px solid $lightgrey;
+}
+
+/* Disabled form elements */
+input.form-button-disabled,
+input.form-button-disabled:hover,
+input.form-button-disabled:focus,
+input.form-button-disabled:active,
+.form-disabled input,
+.form-disabled select,
+.form-disabled textarea {
+  color: #717171;
+  border-color: #bbb;
+  background: #ededed;
+}
+
+.form-disabled .grippie {
+  border-color: $lightgrey;
+  background-color: #ededed;
+}
+
+.form-disabled label {
+  color: #717171;
+}
+
+#search-block-form input.form-submit,
+#search-form input.form-submit {
+  border-color: #e4e4e4 #d2d2d2 #b4b4b4;
+}
+
+.js .dropbutton-widget a:hover {
+  color: $black;
+  border-color: #b8b8b8;
+  background-color: #f8f8f8;
+}
+
+.custom-menu-wrapper {
+  background-color: $black;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+  background-color: transparent;
+}
+
+.custom-menu-screen {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.custom-menu-bottom {
+  border-top: 1px solid $lightgrey;
+  background-color: $lightgrey \9;
+}
+
+tr.odd {
+  background: #e4e4e4;
+  background: rgba(0, 0, 0, .105);
+}
+
+tr,
+tr.even {
+  background: #efefef;
+  background: rgba(0, 0, 0, .063);
+}
+
+.view-mode-teaser.sticky {
+  border: 1px solid #d3d7d9;
+  background: #f9f9f9;
+  background: rgba(0, 0, 0, .024);
+}
+
+.l-sidebar tr.even,
+.l-sidebar tr.odd {
+  border-bottom: 1px solid #d6d6d6;
+  background: none;
+}
+
+.tabs ul.secondary li a.active {
+  background: #f2f2f2;
+}
+
+fieldset {
+  border: 1px solid $lightgrey;
+  background: $white;
+}
+
+div.admin-panel {
+  border: 1px solid $lightgrey;
+  background: #fbfbfb;
+}
+
+.basic-cart-grid {
+  color: $white;
+}
+
+#webform-configure-form,
+#webform-configure-form a {
+  color: $realblack;
+}
+
+.l-wrapper.juiced-main,
+.l-content.juiced-main {
+  z-index: 1;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .l-header ul.mobile-menu ul.menu li a {
+    color: $realblack;
+  }
+
+  .block-system-main-menu .mobile-menu-accordion li.expanded li,
+  .block-system-main-menu .mobile-menu-basic li.expanded li {
+    background: $lightgrey !important;
+  }
+
+  .block-system-main-menu ul.menu.responsive-menus-simple li {
+    padding-bottom: 10px !important;
+    background: #333 !important;
+  }
+}

@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the mobile_detect module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function mobile_detect_requirements($phase) {
+  $items = array();
+
+  if ($phase != 'runtime') {
+    return $items;
+  }
+
+  $t = get_t();
+
+  $status = array('title' => $t('Mobile Detect'));
+
+  if (class_exists('Mobile_Detect')) {
+    $mobile_detect = new Mobile_Detect();
+    $status['value'] = $mobile_detect::VERSION;
+    $status['severity'] = REQUIREMENT_OK;
+  }
+  else {
+    $status['value'] = $t('Not found');
+    $status['description'] = $t('Could not find Mobile_Detect.php.');
+    $status['severity'] = REQUIREMENT_ERROR;
+  }
+
+  $items[] = $status;
+
+  return $items;
+}

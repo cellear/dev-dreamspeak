@@ -1,0 +1,12 @@
+name = Views Slideshow
+description = Provides a View style that displays rows as a jQuery slideshow.  This is an API and requires Views Slideshow Cycle or another module that supports the API.
+dependencies[] = views
+package = Views
+backdrop = 1.x
+type = module
+scripts[] = js/views_slideshow.js
+
+; Added by Backdrop CMS packaging script on 2019-07-07
+project = views_slideshow
+version = 1.x-3.3.0
+timestamp = 1562565099

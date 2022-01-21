@@ -1,0 +1,13 @@
+name = Views Slideshow: Cycle
+description = Adds a Rotating slideshow mode to Views Slideshow.
+dependencies[] = views_slideshow
+package = Views
+backdrop = 1.x
+type = module
+scripts[] = js/formoptions.js
+scripts[] = js/views_slideshow_cycle.js
+
+; Added by Backdrop CMS packaging script on 2019-07-07
+project = views_slideshow
+version = 1.x-3.3.0
+timestamp = 1562565099
