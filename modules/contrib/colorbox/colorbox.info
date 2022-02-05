@@ -5,7 +5,7 @@ backdrop = 1.x
 
 configure = admin/config/media/colorbox
 
-; Added by Backdrop CMS packaging script on 2021-05-24
+; Added by Backdrop CMS packaging script on 2022-02-02
 project = colorbox
-version = 1.x-2.15.0
-timestamp = 1621885214
+version = 1.x-2.16.0
+timestamp = 1643835843

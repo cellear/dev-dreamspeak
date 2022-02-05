@@ -287,6 +287,13 @@ function colorbox_admin_settings() {
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
+  $form['colorbox_advanced_settings']['colorbox_unique_token'] = array(
+    '#type' => 'radios',
+    '#title' => t('Unique per-request gallery token'),
+    '#options' => array(1 => t('On'), 0 => t('Off')),
+    '#default_value' => config_get('colorbox.settings', 'colorbox_unique_token'),
+    '#description' => t('If On (default), Colorbox will add a unique per-request token to the gallery id to avoid images being added manually to galleries. The token was added as a security fix but some see the old behavoiur as an feature and this settings makes it possible to remove the token.'),
+  );
   $form['colorbox_advanced_settings']['colorbox_mobile_detect'] = array(
     '#type' => 'radios',
     '#title' => t('Mobile detection'),
@@ -354,9 +361,7 @@ function colorbox_admin_settings() {
     '#type' => 'textarea',
     '#title' => '<span class="element-invisible">' . t('Pages') . '</span>',
     '#default_value' => config_get('colorbox.settings', 'colorbox_pages'),
-    '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array(
-      '%blog' => 'blog',
-      '%blog-wildcard' => 'blog/*',
+    '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard, and use <code>%front</code> for the front page. <p><a href=\"#\" class=\"colorbox-reset-specific-pages-default\">Reset to default</a></p>", array(
       '%front' => '<front>',
     )),
   );

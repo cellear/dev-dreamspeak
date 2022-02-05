@@ -1,8 +1,13 @@
+/**
+ * @file
+ * Colorbox module inline js.
+ */
+
 (function ($) {
 
 Backdrop.behaviors.initColorboxInline = {
   attach: function (context, settings) {
-    if (!$.isFunction($.colorbox)) {
+    if (!$.isFunction($.colorbox) || typeof settings.colorbox === 'undefined') {
       return;
     }
 
@@ -47,7 +52,8 @@ Backdrop.behaviors.initColorboxInline = {
         return $.urlParam('height', $(this).attr('href'));
       },
       title:function(){
-        return decodeURIComponent($.urlParam('title', $(this).attr('href')));
+        return Drupal.checkPlain(decodeURIComponent(Drupal.checkPlain(
+          $.urlParam('title', $(this).attr('href')))));
       },
       iframe:function(){
         return $.urlParam('iframe', $(this).attr('href'));
