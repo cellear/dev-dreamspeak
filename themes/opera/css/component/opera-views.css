@@ -3,6 +3,11 @@
   padding-left: 0;
 }
 
+.view-content img {
+  filter: drop-shadow(3px 2px 5px gray);
+  margin-bottom: 1.3rem;
+}
+
 .view-blog-post .views-field-name {
   margin-bottom: 20px;
 }
@@ -11,14 +16,6 @@
 .views-view-grid .views-grid-box {
   padding: 1rem;
   border: none;
-}
- 
-.views-view-grid .views-grid-box.row-first {
-  padding: 1rem 1rem 1rem 0;
-}
-
-.views-view-grid .views-grid-box.row-last {
-  padding: 1rem 0 1rem 1rem;
 }
 
 .block-content .view-header {
@@ -41,12 +38,12 @@
   padding: 0;
 }
 
+.view.container,
+.view .views-view-grid {
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+}
 
-
-
-
-
-
-
-
-
+.view-header {
+  margin-bottom: 2rem;
+}

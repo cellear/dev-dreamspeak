@@ -1,0 +1,30 @@
+/* Home page cards */
+.block-views-promoted-cards-block {
+  max-width: none;
+}
+.view-promoted-cards {
+  margin: 2rem 0;
+}
+.view-promoted-cards .views-view-grid {
+  gap: 2rem;
+}
+.view-promoted-cards .views-grid-box {
+  border: none;
+  padding: 0 0 1rem;
+  background-color: #fff;
+  max-width: 540px;
+}
+.view-promoted-cards .views-field {
+  padding: 0 1rem;
+}
+.view-promoted-cards .views-field-field-image {
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .view-promoted-cards .views-view-grid {
+    display: block;
+  }
+  .view-promoted-cards .views-grid-box {
+    margin: 0 auto 2rem;
+  }
+}

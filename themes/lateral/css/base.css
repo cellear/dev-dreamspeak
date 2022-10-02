@@ -110,12 +110,9 @@ pre {
   border-radius: 3px;
 }
 table {
-  display: block;
   border-collapse: collapse;
   max-width: 100%;
-  overflow-x: auto;
-  margin: 1em 0;
-  padding-bottom: 1em;
+  margin: 1em 0 1.5em;
 }
 tr.even {
   background-color: initial;
@@ -512,4 +509,13 @@ h6 {
     margin-left: -15px;
     margin-right: -15px;
   }
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br,
+.ui-corner-bl,
+.ui-corner-tr,
+.ui-corner-tl {
+  border-radius: 0 !important;
 }

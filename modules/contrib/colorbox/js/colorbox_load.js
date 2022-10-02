@@ -41,7 +41,7 @@ Backdrop.behaviors.initColorboxLoad = {
         if (e[1] == 'width') { e[1] = 'innerWidth'; }
         if (e[1] == 'height') { e[1] = 'innerHeight'; }
         if (e[2]) {
-          e[2] = Drupal.checkPlain(e[2]);
+          e[2] = Backdrop.checkPlain(e[2]);
         }
         p[e[1]] = e[2];
       }
@@ -51,16 +51,25 @@ Backdrop.behaviors.initColorboxLoad = {
     $('.colorbox-load', context)
       .once('init-colorbox-load', function () {
         var href = $(this).attr('href');
-        if (!hrefIsSafe(href)) {
-          return;
-        }
 
         var params = $.urlParams(href);
+
+        // Always load in an iframe.
+        params.iframe = true;
+
+        // Set inner width and height if not already specified.
+        if (!params.hasOwnProperty('innerWidth')) {
+          params.innerWidth = $(window).width() * .8;
+        }
+        if (!params.hasOwnProperty('innerHeight')) {
+          params.innerHeight = $(window).height() * .8;
+        }
+
         if (!params.hasOwnProperty('title')) {
           // If a title attribute is supplied, sanitize it.
           var title = $(this).attr('title');
           if (title) {
-            params.title = Drupal.checkPlain(title);
+            params.title = Drupal.colorbox.sanitizeMarkup(title);
           }
         }
         $(this).colorbox($.extend({}, settings.colorbox, params));
@@ -78,15 +87,15 @@ Backdrop.behaviors.initColorboxLoad = {
  *   Boolean true if the href is safe.
  */
 function hrefIsSafe(href) {
-  var normalizedUrl = Drupal.absoluteUrl(href);
+  var normalizedUrl = Backdrop.absoluteUrl(href);
 
   // Only local, non-file-system URLs are allowed.
-  if (!Drupal.urlIsLocal(normalizedUrl)) {
+  if (!Backdrop.urlIsLocal(normalizedUrl)) {
     return false;
   }
 
   // Reject uploaded files from the public or private file system.
-  if (normalizedUrl.indexOf(Drupal.settings.colorbox.file_public_path) !== -1 ||
+  if (normalizedUrl.indexOf(Backdrop.settings.colorbox.file_public_path) !== -1 ||
     normalizedUrl.match(/\/system\/files\//) ||
     normalizedUrl.match(/[?|&]q=system\/files\//)) {
     return false;
