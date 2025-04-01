@@ -1,0 +1,7 @@
+name: dreamspeak-from-github
+recipe: backdrop
+config:
+  php: '7.4'
+  webroot: .
+
+  
