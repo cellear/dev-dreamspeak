@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Backdrop core implementations of MailSystemInterface.
@@ -10,7 +9,7 @@
  */
 class DefaultMailSystem implements MailSystemInterface {
   /**
-   * Concatenate and wrap the e-mail body for plain-text mails.
+   * Concatenate and wrap the email body for plain-text mails.
    *
    * @param $message
    *   A message array, as described in hook_mail_alter().
@@ -21,15 +20,15 @@ class DefaultMailSystem implements MailSystemInterface {
   public function format(array $message) {
     // Join the body array into one string.
     $message['body'] = implode("\n\n", $message['body']);
-    // Convert any HTML to plain-text.
+    // Convert any HTML to plain-text and wrap the mail body for sending.
+    // Note that backdrop_html_to_text() already calls backdrop_wrap_mail(), so
+    // it is not necessary to call that explicitly again.
     $message['body'] = backdrop_html_to_text($message['body']);
-    // Wrap the mail body for sending.
-    $message['body'] = backdrop_wrap_mail($message['body']);
     return $message;
   }
 
   /**
-   * Send an e-mail message, using Backdrop variables and default settings.
+   * Send an email message, using Backdrop variables and default settings.
    *
    * @see http://php.net/manual/function.mail.php
    * @see backdrop_mail()
@@ -56,14 +55,22 @@ class DefaultMailSystem implements MailSystemInterface {
     $line_endings = settings_get('mail_line_endings', MAIL_LINE_ENDINGS);
     // Prepare mail commands.
     $mail_subject = mime_header_encode($message['subject']);
-    // Note: e-mail uses CRLF for line-endings. PHP's API requires LF
+    // Note: email uses CRLF for line-endings. PHP's API requires LF
     // on Unix and CRLF on Windows. Backdrop automatically guesses the
     // line-ending format appropriate for your system. If you need to
     // override this, adjust $settings['mail_line_endings'] in settings.php.
     $mail_body = preg_replace('@\r?\n@', $line_endings, $message['body']);
     // For headers, PHP's API suggests that we use CRLF normally,
     // but some MTAs incorrectly replace LF with CRLF. See #234403.
-    $mail_headers = join("\n", $mimeheaders);
+    // $settings['mail_headers_line_endings'] will override this setting.
+    $headers_line_endings = settings_get('mail_headers_line_endings', "\n");
+    if (defined('PHP_VERSION_ID') && PHP_VERSION_ID >= 80000 ) {
+      // PHP 8+ requires headers to be separated by CRLF, see:
+      // - https://bugs.php.net/bug.php?id=81158
+      // - https://github.com/php/php-src/commit/6983ae751cd301886c966b84367fc7aaa1273b2d#diff-c6922cd89f6f75912eb377833ca1eddb7dd41de088be821024b8a0e340fed3df
+      $headers_line_endings = settings_get('mail_headers_line_endings', "\r\n");
+    }
+    $mail_headers = join($headers_line_endings, $mimeheaders);
 
     // We suppress warnings and notices from mail() because of issues on some
     // hosts. The return value of this method will still indicate whether mail
@@ -140,10 +147,10 @@ class DefaultMailSystem implements MailSystemInterface {
  */
 class TestingMailSystem extends DefaultMailSystem implements MailSystemInterface {
   /**
-   * Accept an e-mail message and store it in a variable.
+   * Accept an email message and store it in a variable.
    *
    * @param $message
-   *   An e-mail message.
+   *   An email message.
    */
   public function mail(array $message) {
     $captured_emails = state_get('test_email_collector', array());
@@ -152,4 +159,3 @@ class TestingMailSystem extends DefaultMailSystem implements MailSystemInterface
     return TRUE;
   }
 }
-

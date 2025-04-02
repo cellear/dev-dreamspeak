@@ -7,7 +7,7 @@ type = module
 scripts[] = js/formoptions.js
 scripts[] = js/views_slideshow_cycle.js
 
-; Added by Backdrop CMS packaging script on 2019-07-07
+; Added by Backdrop CMS packaging script on 2024-08-13
 project = views_slideshow
-version = 1.x-3.3.0
-timestamp = 1562565099
+version = 1.x-3.3.1
+timestamp = 1723578778

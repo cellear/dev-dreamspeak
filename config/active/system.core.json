@@ -104,11 +104,18 @@
     "site_logo_attributes": [],
     "site_logo_upload": "",
     "site_favicon_upload": "",
-    "block_interest_cohort": 1,
     "messages_dismissible": 1,
     "path_pattern": "accounts/[user:name]",
     "file_additional_public_schemes": [],
     "log_max_length": 56,
     "file_not_normalized_schemes": [],
-    "user_editor_role": ""
+    "user_editor_role": "",
+    "jquery_version": "legacy",
+    "backdrop_http_request": {
+        "strip_sensitive_headers_on_host_change": true,
+        "strip_sensitive_headers_on_https_downgrade": true
+    },
+    "install_version": "1.20.x",
+    "user_login_appearance": "tabs",
+    "login_admin_theme": 1
 }

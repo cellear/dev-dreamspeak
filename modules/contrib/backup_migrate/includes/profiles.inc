@@ -4,7 +4,7 @@
  * @file
  * All of the settings profiles handling code for Backup and Migrate.
  */
-backup_migrate_include('crud');
+require_once dirname(__FILE__) . '/crud.inc';
 
 /**
  * Implementation of hook_backup_migrate_profile_subtypes().
@@ -27,7 +27,7 @@ function backup_migrate_backup_migrate_profile_subtypes() {
  * Get all the available backup profiles.
  */
 function backup_migrate_get_profiles() {
-  backup_migrate_include('filters');
+  require_once dirname(__FILE__) . '/filters.inc';
   static $profiles = NULL;
 
   // Get the list of profiles and cache them locally.
@@ -90,7 +90,9 @@ function _backup_migrate_ui_backup_settings_form($profile) {
   backdrop_add_js(backdrop_get_path('module', 'backup_migrate') .'/backup_migrate.js', array('type' => 'file', 'scope' => 'footer'));
   backdrop_add_css(backdrop_get_path('module', 'backup_migrate') .'/backup_migrate.css');
 
-  backup_migrate_include('files', 'destinations', 'filters');
+  require_once dirname(__FILE__) . '/filters.inc';
+  require_once dirname(__FILE__) . '/destinations.inc';
+  require_once dirname(__FILE__) . '/files.inc';
 
   $form    = array();
 
@@ -106,24 +108,28 @@ function _backup_migrate_ui_backup_settings_form($profile) {
     "#title" => t("Backup file name"),
     "#default_value" => $profile->filename,
   );
-  if (function_exists('token_replace')) {
-    $form['file']['token_help'] = array(
-      '#title' => t('Replacement patterns'),
-      '#type' => 'fieldset',
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
-    );
-    $form['file']['token_help']['help'] = array(
-      '#theme' => 'token_tree',
-      '#token_types' => array('current-date', 'site'),
-      '#global_types' => FALSE,
-    );
-    $form['file']['filename']['#description'] = t('You can use tokens in the file name.');
-  }
+  
+  $form['file']['token_help'] = array(
+    '#title' => t('Replacement patterns'),
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['file']['token_help']['help'] = array(
+    '#theme' => 'token_tree',
+    '#token_types' => array('current-date', 'site'),
+    '#global_types' => FALSE,
+  );
+  $form['file']['filename']['#description'] = t('You can use tokens in the file name.');
 
   $form['file']['append_timestamp'] = array(
-    "#type" => "checkbox",
-    "#title" => t("Append a timestamp."),
+    "#type" => "radios",
+    '#options' => array(
+      0 => t('Create separate backups if `Backup file name` already exists'),
+      2 => t('Overwrite the existing backup file'),
+      1 => t('Append the timestamp'),
+    ),
+    "#title" => t("Save mode"),
     "#default_value" => $profile->append_timestamp,
   );
   $form['file']['timestamp_format_wrapper'] = array(
@@ -174,7 +180,8 @@ function _backup_migrate_ui_backup_settings_form_submit($form, &$form_state) {
  * Get the default profile.
  */
 function _backup_migrate_profile_default_profile() {
-  backup_migrate_include('files', 'filters');
+  require_once dirname(__FILE__) . '/filters.inc';
+  require_once dirname(__FILE__) . '/files.inc';
   return array(
     'source_id' => 'db',
     'filename' => _backup_migrate_default_filename(),
@@ -203,12 +210,17 @@ function _backup_migrate_profile_saved_default_profile($profile_id = NULL) {
  * A profile class for crud operations.
  */
 class backup_migrate_profile extends backup_migrate_item {
-  var $db_table = "backup_migrate_profiles";
-  var $type_name = "profile";
-  var $singular = 'settings profile';
-  var $plural = 'settings profiles';
-  var $title_plural = 'Settings Profiles';
-  var $title_singular = 'Settings Profile';
+  public $db_table = "backup_migrate_profiles";
+  public $type_name = "profile";
+  public $singular = 'settings profile';
+  public $plural = 'settings profiles';
+  public $title_plural = 'Settings Profiles';
+  public $title_singular = 'Settings Profile';
+
+  public $source;
+  public $source_id;
+  public $destinations;
+  public $destination_id;
 
   /**
    * Perform a shallow merge of the defaults and the parameters.
@@ -286,7 +298,7 @@ class backup_migrate_profile extends backup_migrate_item {
    * Get the source of the profile.
    */
   function get_source() {
-    backup_migrate_include('locations');
+    require_once dirname(__FILE__) . '/locations.inc';
     if (!empty($this->source_id) && (empty($this->source) || $this->source->get_id() !== $this->source_id)) {
       $this->source = backup_migrate_get_source($this->source_id);
     }
@@ -315,7 +327,7 @@ class backup_migrate_profile extends backup_migrate_item {
    * Get the destination of the profile.
    */
   function get_destinations() {
-    backup_migrate_include('destinations');
+    require_once dirname(__FILE__) . '/destinations.inc';
     if (empty($this->destinations)) {
       $this->destinations = array();
       $ids = $weights = array();

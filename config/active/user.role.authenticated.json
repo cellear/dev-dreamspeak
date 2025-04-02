@@ -10,5 +10,6 @@
         "skip comment approval",
         "upload editor images",
         "use text format filtered_html"
-    ]
+    ],
+    "description": ""
 }

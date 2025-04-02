@@ -12,8 +12,22 @@
  * @ingroup backup_migrate_filters
  */
 class backup_migrate_filter_utils extends backup_migrate_filter {
-  var $op_weights = array('pre_backup' => -1000, 'post_backup' => 1000);
-  var $saved_devel_query = NULL;
+  public $op_weights = array('pre_backup' => -1000, 'post_backup' => 1000);
+  public $saved_devel_query = NULL;
+
+
+  /**
+   * Flag to indicate we have put the site in maintenance mode.
+   * 
+   * @var bool $saved_site_offline
+   */
+  public $saved_site_offline;
+
+  /**
+   * Temporarily stores original maintenance mode message.
+   */
+  public $saved_site_offline_message;
+
 
   /**
    * Get the default backup settings for this filter.
@@ -72,6 +86,12 @@ class backup_migrate_filter_utils extends backup_migrate_filter {
       '#title' => t('Add a note'),
       '#default_value' => !empty($settings['utils_description']) ? $settings['utils_description'] : NULL,
       '#description' => t('Add a short note to the backup file.'),
+    );
+    $form['advanced']['utils_drop_all_tables'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Drop all tables before import (MySQL only)'),
+      '#default_value' => !empty($settings['utils_drop_all_tables']) ? $settings['utils_drop_all_tables'] : NULL,
+      '#description' => t('Drop all existing database tables before restoring the backup. This option is currently available on MySQL servers only.'),
     );
     $form['advanced']['use_cli'] = array(
       "#type" => "checkbox",
@@ -207,16 +227,18 @@ class backup_migrate_filter_utils extends backup_migrate_filter {
    * Take the site offline if configured to do so.
    */
   function take_site_offline($settings) {
-    // Save the current state of the site in case a restore overwrites it.
-    $this->saved_site_offline = config_get('backup_migrate.settings','maintenance_mode');
-    if (@$settings->filters['utils_site_offline']) {
-      $this->saved_site_offline_message = config_get('backup_migrate.settings','maintenance_mode_message');
-      if (!empty($settings->filters['utils_site_offline_message'])) {
-        $this->saved_site_offline_message = config_get('backup_migrate.settings','maintenance_mode_message');
-        config_set('backup_migrate.settings','maintenance_mode_message', $settings->filters['utils_site_offline_message']);
+    // If the site is already offline then don't do anything.
+    if (!state_get('maintenance_mode', 0)) {
+      // Save the current state of the site in case a restore overwrites it.
+      if (!empty($settings->filters['utils_site_offline'])) {
+        $this->saved_site_offline = TRUE;
+        $this->saved_site_offline_message = config_get('system.core','maintenance_mode_message');
+        if (!empty($settings->filters['utils_site_offline_message'])) {
+          config_set('system.core','maintenance_mode_message', $settings->filters['utils_site_offline_message']);
+        }
+        state_set('maintenance_mode', 1);
+        _backup_migrate_message('Site was taken offline.');
       }
-      config_set('backup_migrate.settings','maintenance_mode', 1);
-      _backup_migrate_message('Site was taken offline.');
     }
   }
 
@@ -225,11 +247,11 @@ class backup_migrate_filter_utils extends backup_migrate_filter {
    */
   function take_site_online($settings) {
     // Take the site back off/online because the restored db may have changed that setting.
-    if (config_get('backup_migrate.settings','maintenance_mode') == 0 && !empty($this->saved_site_offline)) {
-      config_set('backup_migrate.settings','maintenance_mode', 0);
+    if (state_get('maintenance_mode', 0) && !empty($this->saved_site_offline)) {
+      state_set('maintenance_mode', 0);
       if ($settings->filters['utils_site_offline']) {
         if (!empty($this->saved_site_offline_message)) {
-          config_set('backup_migrate.settings','maintenance_mode_message', $this->saved_site_offline_message);
+          config_set('system.core','maintenance_mode_message', $this->saved_site_offline_message);
         }
         _backup_migrate_message('Site was taken online.');
       }

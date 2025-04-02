@@ -1,7 +1,6 @@
-name: dreamspeak-from-github
+name: backdrop-dreamspeak-demo
 recipe: backdrop
 config:
-  php: '7.4'
-  webroot: .
+   webroot: .
 
   

@@ -7,7 +7,7 @@ dependencies[] = fontyourface
 dependencies[] = field
 dependencies[] = options
 
-; Added by Backdrop CMS packaging script on 2021-03-04
+; Added by Backdrop CMS packaging script on 2023-07-03
 project = fontyourface
-version = 1.x-2.8.0
-timestamp = 1614888792
+version = 1.x-2.8.2
+timestamp = 1688414930

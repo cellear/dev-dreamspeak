@@ -11,7 +11,11 @@
  * @ingroup backup_migrate_destinations
  */
 class backup_migrate_destination_filesource extends backup_migrate_source {
-  var $supported_ops = array('restore', 'configure', 'delete', 'source');
+  public $supported_ops = array('restore', 'configure', 'delete', 'source');
+  public $settings = array();
+  public $name = "";
+  public $location = "";
+  public $machine_name = "";
 
   function type_name() {
     return t("Files Directory");
@@ -31,7 +35,7 @@ class backup_migrate_destination_filesource extends backup_migrate_source {
       'show_in_list' => FALSE,
     ));
 
-    if (config_get('backup_migrate.settings', 'file_private_path')) {
+    if (config_get('system.core', 'file_private_path')) {
       $out['files_private'] = backup_migrate_create_destination('filesource', array(
         'machine_name' => 'files',
         'location' => 'private://',
@@ -41,7 +45,7 @@ class backup_migrate_destination_filesource extends backup_migrate_source {
     }
 
     foreach ($config_directories as $key => $config_dir) {
-      $out["config_files_$key"] = backup_migrate_create_destination('filesource', array(
+      $out["config_files_$key"] = backup_migrate_create_destination("config_files_$key", array(
         'machine_name' => 'config_files_' . $key,
         'location' => $config_directories[$key],
         'name' => t('Configuration Files Directory (!key)', array('!key' => ucfirst($key))),
@@ -307,7 +311,7 @@ class backup_migrate_destination_filesource extends backup_migrate_source {
 
     // Alert the user to any errors there might have been.
     if ($errors) {
-      if (count($errors < 5)) {
+      if (count($errors) < 5) {
         $filesmsg = t('The following files: !files', array('!files' => theme('item_list', array('items' => $errors))));
       }
       else {

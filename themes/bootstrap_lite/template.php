@@ -198,7 +198,7 @@ function bootstrap_lite_preprocess_page(&$variables){
   if (!empty($path_parts)) {
     $path_classes = array('page-' . $path_parts[0]);
     for ($i = 1; $i < count($path_parts); $i++) {
-      $path_classes[] = $path_classes[$i - 1] . '-' . $path_parts[$i];
+      $path_classes[] = backdrop_clean_css_identifier($path_classes[$i - 1] . '-' . $path_parts[$i]);
     }
     $variables['classes'] = array_merge($variables['classes'], $path_classes);
   }
@@ -965,5 +965,15 @@ function bootstrap_lite_preprocess_node(&$variables){
   if (theme_get_setting('bootstrap_lite_datetime')) {
     $node = $variables['elements']['#node'];
     $variables['timeago'] = t('@time ago', array('@time' => format_interval(time() - $node->created)));
+  }
+}
+
+/**
+ * Implements hook_preprocess_image().
+ */
+function bootstrap_lite_preprocess_image(&$variables) {
+  // Add responsiveness, if necessary.
+  if (theme_get_setting('bootstrap_lite_image_responsive')) {
+    $variables['attributes']['class'][] = 'img-responsive';
   }
 }

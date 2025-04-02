@@ -166,12 +166,6 @@
         "delete any poster content",
         "view mobile detect debug",
         "access splashify admin",
-        "access backup and migrate",
-        "perform backup",
-        "access backup files",
-        "delete backup files",
-        "restore from backup",
-        "administer backup and migrate",
         "access views_bootstrap settings",
         "access devel information",
         "execute php code",
@@ -209,6 +203,13 @@
         "administer meta tags",
         "edit meta tags",
         "administer comment settings",
-        "administer stage_file_proxy settings"
-    ]
+        "administer stage_file_proxy settings",
+        "access backup and migrate",
+        "perform backup",
+        "access backup files",
+        "delete backup files",
+        "restore from backup",
+        "administer backup and migrate"
+    ],
+    "description": ""
 }

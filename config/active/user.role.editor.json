@@ -60,5 +60,6 @@
         "create terms in poster_type",
         "edit terms in poster_type",
         "create terms in person"
-    ]
+    ],
+    "description": ""
 }

@@ -23,7 +23,7 @@ class backup_migrate_source_db extends backup_migrate_source_remote {
    * Save the info by importing it into the database.
    */
   function save_file($file, $settings) {
-    backup_migrate_include('files');
+    require_once dirname(__FILE__) . '/files.inc';
 
     // Set the source_id to the destination_id in the settings since for a restore, the source_id is the
     // database that gets restored to.
@@ -45,6 +45,16 @@ class backup_migrate_source_db extends backup_migrate_source_remote {
     $form['path']['#title'] = t('Database name');
     $form['path']['#description'] = t('The name of the database. The database must exist, it will not be created for you.');
     $form['user']['#description'] = t('Enter the name of a user who has write access to the database.');
+
+    $form['port'] = array(
+      '#title' => t('Port number'),
+      '#type' => 'number',
+      '#step' => 1,
+      '#default_value' => @$this->dest_url['port'],
+      '#weight' => 50,
+      '#description' => t('If left blank, the default port number will be used.')
+    );
+
     return $form;
   }
 
@@ -152,7 +162,13 @@ class backup_migrate_source_db extends backup_migrate_source_remote {
     //$this->lock_tables($settings);
 
     // Switch to a different db if specified.
+    if (config_get('backup_migrate.settings', 'backup_migrate_verbose')) {
+      _backup_migrate_message('Start peak memory usage: %mem', array('%mem' => backup_migrate_get_peak_memory_usage() . 'MB'), 'success');
+    }
     $success = $this->_backup_db_to_file($file, $settings);
+    if (config_get('backup_migrate.settings', 'backup_migrate_verbose')) {
+      _backup_migrate_message('Finish peak memory usage: %mem', array('%mem' => backup_migrate_get_peak_memory_usage() . 'MB'), 'success');
+    }
 
     //$this->unlock_tables($settings);
 

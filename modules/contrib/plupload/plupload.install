@@ -126,7 +126,7 @@ function plupload_update_1000()
 {
 // Migrate variables to config.
   $config = config('plupload.settings');
-  $config->set('temporary_uri', update_variable_get('plupload_temporary_uri', ''));
+  $config->set('temporary_uri', update_variable_get('plupload_temporary_uri', 'temporary://'));
   $config->set('library_path', update_variable_get('plupload_library_path', ''));
   $config->save();
 

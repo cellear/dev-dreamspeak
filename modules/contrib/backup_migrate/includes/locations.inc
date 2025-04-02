@@ -6,13 +6,15 @@
  * All of the location handling code needed for Backup and Migrate.
  */
 
-backup_migrate_include('crud');
+require_once dirname(__FILE__) . '/crud.inc';
 
 /**
  * Get the available location types.
  */
 function backup_migrate_get_location_subtypes() {
-  backup_migrate_include('crud', 'destinations', 'sources');
+  require_once dirname(__FILE__) . '/crud.inc';
+  require_once dirname(__FILE__) . '/destinations.inc';
+  require_once dirname(__FILE__) . '/sources.inc';
   return backup_migrate_crud_subtypes('destination') + backup_migrate_crud_subtypes('source');
 }
 
@@ -25,7 +27,7 @@ function backup_migrate_backup_migrate_locations() {
   $out = array();
 
   // Allow the filter plugins to declare the default locations.
-  backup_migrate_include('filters');
+  require_once dirname(__FILE__) . '/filters.inc';
   $out += backup_migrate_filters_invoke_all('locations');
 
   return $out;
@@ -82,16 +84,20 @@ function backup_migrate_get_location($id) {
  * A base class for creating locations.
  */
 class backup_migrate_location extends backup_migrate_item {
-  var $db_table = "backup_migrate_destinations";
-  var $type_name = "location";
-  var $default_values = array('settings' => array());
-  var $singular = 'location';
-  var $plural = 'locations';
-  var $title_plural = 'Locations';
-  var $title_singular = 'Location';
+  public $db_table = "backup_migrate_destinations";
+  public $type_name = "location";
+  public $default_values = array('settings' => array());
+  public $singular = 'location';
+  public $plural = 'locations';
+  public $title_plural = 'Locations';
+  public $title_singular = 'Location';
 
-  var $subtype = "";
-  var $supported_ops = array();
+  public $location;
+  public $settings;
+  public $dest_url;
+
+  public $subtype = "";
+  public $supported_ops = array();
 
   /**
    * This function is not supposed to be called. It is just here to help the po extractor out.
@@ -250,7 +256,12 @@ class backup_migrate_location extends backup_migrate_item {
 
     // Don't display the download/delete/restore ops if they are not available for this location.
     if ($this->op('list files') && user_access("access backup files")) {
-      $out = array('list files' => l(t("list files"), BACKUP_MIGRATE_MENU_PATH . "/$this->type_name/list/files/". $item_id)) + $out;
+      $out = array(
+        'list files' => array(
+          'title' => t("list files"),
+          'href' => BACKUP_MIGRATE_MENU_PATH . "/$this->type_name/list/files/". $item_id,
+        ),
+      ) + $out;
     }
     if (!$this->op('configure') || !user_access('administer backup and migrate')) {
       unset($out['edit']);
