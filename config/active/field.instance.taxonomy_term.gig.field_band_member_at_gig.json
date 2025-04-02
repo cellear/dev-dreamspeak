@@ -1,0 +1,49 @@
+{
+    "_config_name": "field.instance.taxonomy_term.gig.field_band_member_at_gig",
+    "field_name": "field_band_member_at_gig",
+    "entity_type": "taxonomy_term",
+    "bundle": "gig",
+    "label": "Band member at Gig",
+    "widget": {
+        "weight": "7",
+        "type": "options_buttons",
+        "module": "options",
+        "active": 1,
+        "settings": []
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": [
+        {
+            "tid": "11"
+        },
+        {
+            "tid": "2"
+        },
+        {
+            "tid": "3"
+        },
+        {
+            "tid": "4"
+        }
+    ],
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "10",
+            "settings": []
+        },
+        "full": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "10",
+            "settings": []
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "_config_name": "metatag.instance.taxonomy_term.gig",
+    "storage": "custom",
+    "instance": "taxonomy_term:gig",
+    "config": {
+        "image_src": {
+            "value": "[term:field_gig_image]"
+        }
+    },
+    "name": "taxonomy_term.gig",
+    "label": "Taxonomy term: Gig"
+}

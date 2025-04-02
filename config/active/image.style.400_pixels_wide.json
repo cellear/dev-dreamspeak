@@ -1,0 +1,16 @@
+{
+    "_config_name": "image.style.400_pixels_wide",
+    "label": "400 Pixels Wide",
+    "name": "400_pixels_wide",
+    "effects": [
+        {
+            "name": "image_scale",
+            "data": {
+                "width": "400",
+                "height": "",
+                "upscale": 0
+            },
+            "weight": "1"
+        }
+    ]
+}

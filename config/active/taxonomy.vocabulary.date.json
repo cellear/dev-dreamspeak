@@ -1,0 +1,9 @@
+{
+    "_config_name": "taxonomy.vocabulary.date",
+    "name": "Date",
+    "machine_name": "date",
+    "description": "A location in time that you can tag an object to",
+    "hierarchy": "0",
+    "language": 0,
+    "weight": 0
+}

@@ -1,0 +1,49 @@
+{
+    "_config_name": "field.instance.comment.comment_node_page.field_submitted_pictures",
+    "field_name": "field_submitted_pictures",
+    "entity_type": "comment",
+    "bundle": "comment_node_page",
+    "label": "Photo submission",
+    "widget": {
+        "weight": "1",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "bar",
+            "browser_view": 0,
+            "preview_image_style": "400_pixels_wide"
+        }
+    },
+    "description": "If you have a photo you'd like to have placed on the site, please upload it here and describe in the text as much info as possible, like who is in it, when it was taken, who took it, and what's happening in the photo.  It's ok if you don't know all that, submit it anyway, but do your best.\r\n\r\nSorry for the inconvenience, but with the craziness of the Internet these days we need to make sure pictures are appropriate before letting them be published.",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "images_submitted",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "2MB",
+        "max_dimensions": "",
+        "min_dimensions": "150x150",
+        "alt_field": 1,
+        "title_field": 1,
+        "orientate": 0,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "image",
+            "settings": {
+                "image_style": "",
+                "image_link": "",
+                "image_float": "",
+                "image_load": "auto"
+            },
+            "module": "image",
+            "weight": 1
+        }
+    }
+}

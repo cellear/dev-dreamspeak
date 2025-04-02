@@ -1,0 +1,13 @@
+{
+    "_config_name": "css_editor.settings",
+    "css_editor_enabled_themes": {
+        "bootstrap_lite": "bootstrap_lite",
+        "basis": 0,
+        "lateral": 0,
+        "lumi": 0,
+        "opera": 0,
+        "pelerine": 0,
+        "seven": 0,
+        "snazzy": 0
+    }
+}

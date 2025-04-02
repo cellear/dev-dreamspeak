@@ -1,0 +1,35 @@
+{
+    "_config_name": "field.instance.node.photos.field_gig",
+    "field_name": "field_gig",
+    "entity_type": "node",
+    "bundle": "photos",
+    "label": "Gig",
+    "widget": {
+        "weight": "5",
+        "type": "taxonomy_autocomplete",
+        "module": "taxonomy",
+        "active": 1,
+        "settings": {
+            "follow_content_language": true,
+            "size": 60,
+            "autocomplete_path": "taxonomy/autocomplete"
+        }
+    },
+    "description": "Do we know where this picture was taken?  Even if you're not 100% sure, take your best guess, we can always fix it later",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "inline",
+            "type": "taxonomy_term_reference_link",
+            "weight": "3",
+            "settings": [],
+            "module": "taxonomy"
+        }
+    }
+}

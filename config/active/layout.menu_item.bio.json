@@ -1,0 +1,26 @@
+{
+    "_config_name": "layout.menu_item.bio",
+    "name": "bio",
+    "title": "",
+    "path": "nest/%",
+    "menu": {
+        "title": null,
+        "weight": 0,
+        "type": "none",
+        "name": "main-menu",
+        "parent": {
+            "title": null,
+            "weight": 0,
+            "type": "none",
+            "name": "main-menu"
+        }
+    },
+    "conditions": [],
+    "arguments": {
+        "1": {
+            "plugin": "string",
+            "name": "string",
+            "position": 1
+        }
+    }
+}

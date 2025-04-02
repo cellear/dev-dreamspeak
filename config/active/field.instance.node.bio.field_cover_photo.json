@@ -1,0 +1,49 @@
+{
+    "_config_name": "field.instance.node.bio.field_cover_photo",
+    "field_name": "field_cover_photo",
+    "entity_type": "node",
+    "bundle": "bio",
+    "label": "Cover Photo",
+    "widget": {
+        "weight": "2",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "bar",
+            "browser_view": "image_library",
+            "preview_image_style": "thumbnail"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "photo_main",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "2MB",
+        "max_dimensions": "2000x2000",
+        "min_dimensions": "300x300",
+        "alt_field": 1,
+        "title_field": 0,
+        "orientate": 1,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "image",
+            "weight": "0",
+            "settings": {
+                "image_style": "",
+                "image_link": "",
+                "image_float": "",
+                "image_load": "auto"
+            },
+            "module": "image"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "_config_name": "taxonomy.vocabulary.gig",
+    "name": "Gig",
+    "machine_name": "gig",
+    "description": "An event with a place and a time",
+    "hierarchy": "0",
+    "language": 0,
+    "weight": 0
+}

@@ -1,0 +1,9 @@
+{
+    "_config_name": "taxonomy.vocabulary.location",
+    "name": "Location",
+    "machine_name": "location",
+    "description": "Tag objects with physical locations in the real world",
+    "hierarchy": "0",
+    "language": 0,
+    "weight": 0
+}

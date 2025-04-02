@@ -1,0 +1,53 @@
+{
+    "_config_name": "field.instance.node.pile.field_photo",
+    "field_name": "field_photo",
+    "entity_type": "node",
+    "bundle": "pile",
+    "label": "Photos",
+    "widget": {
+        "weight": "1",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "bar",
+            "browser_view": "image_library",
+            "preview_image_style": "400_pixels_wide"
+        }
+    },
+    "description": "",
+    "required": 1,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "photostacks",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "2 MB",
+        "max_dimensions": "",
+        "min_dimensions": "200x200",
+        "alt_field": 1,
+        "title_field": 1,
+        "orientate": 0,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "colorbox",
+            "weight": "0",
+            "settings": {
+                "colorbox_node_style": "hide",
+                "colorbox_node_style_first": "400_pixels_wide",
+                "colorbox_image_style": "large",
+                "colorbox_gallery": "post",
+                "colorbox_gallery_custom": "",
+                "colorbox_caption": "title",
+                "colorbox_caption_custom": "",
+                "colorbox_multivalue_index": null
+            },
+            "module": "colorbox"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "_config_name": "field.instance.taxonomy_term.gig.field_hide",
+    "field_name": "field_hide",
+    "entity_type": "taxonomy_term",
+    "bundle": "gig",
+    "label": "Hide",
+    "widget": {
+        "weight": 0,
+        "type": "options_onoff",
+        "module": "options",
+        "active": 1,
+        "settings": {
+            "display_label": 0
+        }
+    },
+    "description": "The opposite of publish.  Check this to prevent this term from being displayed, in displays that recognize it.",
+    "required": 0,
+    "deleted": 0,
+    "default_value": [
+        {
+            "value": 0
+        }
+    ],
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "9",
+            "settings": []
+        },
+        "full": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "9",
+            "settings": []
+        }
+    }
+}

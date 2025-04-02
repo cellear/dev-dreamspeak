@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.bb_custom_block",
+    "delta": "bb_custom_block",
+    "info": "BB Custom block",
+    "title": "BB Custom block",
+    "description": "BB Custom block",
+    "body": {
+        "value": "<p>BB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom blockBB Custom block</p>\r\n",
+        "format": "filtered_html"
+    },
+    "default_langcode": "und"
+}

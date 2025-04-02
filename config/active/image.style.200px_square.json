@@ -1,0 +1,15 @@
+{
+    "_config_name": "image.style.200px_square",
+    "label": "200px square",
+    "name": "200px_square",
+    "effects": [
+        {
+            "name": "image_scale_and_crop",
+            "data": {
+                "width": "200",
+                "height": "200"
+            },
+            "weight": "1"
+        }
+    ]
+}

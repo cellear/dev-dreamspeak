@@ -1,0 +1,38 @@
+{
+    "_config_name": "splashify.settings",
+    "splashify_how_desktop_mode": "lightbox",
+    "splashify_how_desktop_size": "",
+    "splashify_when_mobile": 1,
+    "splashify_how_mobile_mode": "redirect",
+    "splashify_how_long_delay": "",
+    "splashify_how_long_before_autoclose": "",
+    "splashify_what_desktop_mode": "fullscreen",
+    "splashify_what_desktop_content": {
+        "value": "<p><img alt=\"\" data-file-id=\"1\" height=\"1054\" src=\"/files/hero/zooming-rat-a3.jpg\" width=\"1440\" /></p>\r\n",
+        "format": "filtered_html"
+    },
+    "splashify_what_desktop_pagetitle": "",
+    "splashify_what_mobile_mode": "fullscreen",
+    "splashify_what_mobile_content": {
+        "value": "<p><img alt=\"\" height=\"1054\" src=\"/files/hero/zooming-rat-a3.jpg\" width=\"1440\" /></p>\r\n",
+        "format": "filtered_html"
+    },
+    "splashify_what_mobile_pagetitle": "",
+    "splashify_when_anonymous": 0,
+    "splashify_when_desktop_frequency": "always",
+    "splashify_when_roles": 0,
+    "splashify_when_roles_options": {
+        "authenticated": 0,
+        "editor": 0,
+        "administrator": 0
+    },
+    "splashify_when_mobile_frequency": "always",
+    "splashify_when_mobile_test": 1,
+    "splashify_where_desktop_page": "home",
+    "splashify_where_desktop_listpages": "",
+    "splashify_where_desktop_opposite": "FALSE",
+    "splashify_where_mobile_page": "home",
+    "splashify_where_mobile_listpages": "",
+    "splashify_where_mobile_opposite": "FALSE",
+    "disable_referrer_check": 0
+}

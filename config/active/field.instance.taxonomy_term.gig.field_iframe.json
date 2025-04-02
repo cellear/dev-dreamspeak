@@ -1,0 +1,46 @@
+{
+    "_config_name": "field.instance.taxonomy_term.gig.field_iframe",
+    "field_name": "field_iframe",
+    "entity_type": "taxonomy_term",
+    "bundle": "gig",
+    "label": "iFrame",
+    "widget": {
+        "weight": "11",
+        "type": "text_textarea",
+        "module": "text",
+        "active": 1,
+        "settings": {
+            "rows": "8"
+        }
+    },
+    "description": "Let's you put content into an iframe.  This is an experimental feature that really requires you to know your way around HTML, so if you don't know what an iframe is, ignore this.",
+    "required": 0,
+    "deleted": 0,
+    "default_value": [
+        {
+            "value": "",
+            "format": "iframable"
+        }
+    ],
+    "default_value_function": null,
+    "settings": {
+        "text_processing": "1",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "text_default",
+            "weight": "7",
+            "settings": [],
+            "module": "text"
+        },
+        "full": {
+            "label": "hidden",
+            "type": "text_default",
+            "weight": "8",
+            "settings": [],
+            "module": "text"
+        }
+    }
+}

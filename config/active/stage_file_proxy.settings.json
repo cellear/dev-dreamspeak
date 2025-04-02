@@ -1,0 +1,10 @@
+{
+    "_config_name": "stage_file_proxy.settings",
+    "origin": "https://dreamspeak.com",
+    "origin_dir": "files",
+    "excluded_extensions": "",
+    "hotlink": 0,
+    "use_image_style_root": 1,
+    "sslversion": "3",
+    "headers": ""
+}

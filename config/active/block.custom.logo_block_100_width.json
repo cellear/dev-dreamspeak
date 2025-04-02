@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.logo_block_100_width",
+    "delta": "logo_block_100_width",
+    "info": "Logo Block - 65% Width Centered",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<img alt=\"\" data-align=\"center\" data-file-id=\"37\" src=\"/files/inline-images/dreamspeak-sun-logo.png\" width=\"65%\" />",
+        "format": "full_html"
+    },
+    "default_langcode": "und"
+}

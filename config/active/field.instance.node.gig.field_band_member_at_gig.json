@@ -1,0 +1,30 @@
+{
+    "_config_name": "field.instance.node.gig.field_band_member_at_gig",
+    "field_name": "field_band_member_at_gig",
+    "entity_type": "node",
+    "bundle": "gig",
+    "label": "Band member at Gig",
+    "widget": {
+        "weight": "5",
+        "type": "options_buttons",
+        "module": "options",
+        "active": 1,
+        "settings": []
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "7",
+            "settings": []
+        }
+    }
+}

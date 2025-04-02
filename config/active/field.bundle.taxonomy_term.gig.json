@@ -1,0 +1,32 @@
+{
+    "_config_name": "field.bundle.taxonomy_term.gig",
+    "bundle": "gig",
+    "entity_type": "taxonomy_term",
+    "view_modes": {
+        "full": {
+            "custom_settings": true
+        }
+    },
+    "extra_fields": {
+        "form": {
+            "name": {
+                "weight": "1"
+            },
+            "description": {
+                "weight": "2"
+            }
+        },
+        "display": {
+            "description": {
+                "default": {
+                    "weight": "4",
+                    "visible": true
+                },
+                "full": {
+                    "weight": "5",
+                    "visible": true
+                }
+            }
+        }
+    }
+}

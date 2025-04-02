@@ -1,0 +1,399 @@
+{
+    "_config_name": "layout.layout.bio",
+    "path": "nest/%",
+    "name": "bio",
+    "title": "nest",
+    "description": null,
+    "renderer_name": "standard",
+    "module": null,
+    "weight": 0,
+    "storage": 1,
+    "layout_template": "moscone_flipped",
+    "disabled": false,
+    "settings": {
+        "title": "",
+        "title_display": "default",
+        "title_block": null
+    },
+    "positions": {
+        "header": [
+            "ecac52a2-fc5c-49fc-aa09-9b012392b706",
+            "42831d00-b6b5-491a-b54c-76a20e74e1cc"
+        ],
+        "top": [],
+        "content": [
+            "05776ede-0938-4b51-be00-ef26c6fdcaba",
+            "5705352e-0b04-4ae0-8703-3b3bae76d24c",
+            "bfbbbaba-ad4e-43f5-a75b-91ce33d55bb5"
+        ],
+        "sidebar": [
+            "db98e100-cd88-42d3-be00-fe2d76fda3b5",
+            "18544afc-7b1f-479e-aa02-2b79902527f5",
+            "319e06c8-33d0-471f-a000-abe754642dbb"
+        ],
+        "bottom": [],
+        "footer": [
+            "1fb812dc-b86a-4b08-9107-7abca7fea724",
+            "33c84b90-599f-4cd1-8a00-eb6e4b2698fb"
+        ],
+        "title": []
+    },
+    "contexts": [],
+    "relationships": [],
+    "content": {
+        "ecac52a2-fc5c-49fc-aa09-9b012392b706": {
+            "plugin": "block:logo_block_40",
+            "data": {
+                "module": "block",
+                "delta": "logo_block_40",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "delta": "logo_block_40",
+                        "description": "",
+                        "reusable": true
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "ecac52a2-fc5c-49fc-aa09-9b012392b706",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "42831d00-b6b5-491a-b54c-76a20e74e1cc": {
+            "plugin": "system:main-menu",
+            "data": {
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "dynamic",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "top_only",
+                        "level": "1",
+                        "depth": "1",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 0
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "42831d00-b6b5-491a-b54c-76a20e74e1cc",
+                "style": {
+                    "plugin": "dynamic",
+                    "data": {
+                        "settings": {
+                            "classes": "top-site-menu",
+                            "wrapper_tag": "div",
+                            "title_tag": "h2",
+                            "title_classes": "block-title",
+                            "content_tag": "div",
+                            "content_classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "05776ede-0938-4b51-be00-ef26c6fdcaba": {
+            "plugin": "views:bio_matching_bandmember_term-bandmember_bio",
+            "data": {
+                "module": "views",
+                "delta": "bio_matching_bandmember_term-bandmember_bio",
+                "settings": {
+                    "link_to_view": "1",
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": "30",
+                    "offset": 0,
+                    "path": "bandmember-view",
+                    "fields_override": null,
+                    "title_display": "none",
+                    "title": "Bio",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": "",
+                    "arguments": {
+                        "field_bandmember_tid": "doug"
+                    }
+                },
+                "uuid": "05776ede-0938-4b51-be00-ef26c6fdcaba",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "5705352e-0b04-4ae0-8703-3b3bae76d24c": {
+            "plugin": "views:bio_matching_bandmember_term-block_3",
+            "data": {
+                "module": "views",
+                "delta": "bio_matching_bandmember_term-block_3",
+                "settings": {
+                    "link_to_view": "1",
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": "30",
+                    "offset": 0,
+                    "path": "bandmember-view",
+                    "fields_override": null,
+                    "title_display": "custom",
+                    "title": "Websites",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "5705352e-0b04-4ae0-8703-3b3bae76d24c",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "bfbbbaba-ad4e-43f5-a75b-91ce33d55bb5": {
+            "plugin": "views:bio_matching_bandmember_term-block_2",
+            "data": {
+                "module": "views",
+                "delta": "bio_matching_bandmember_term-block_2",
+                "settings": {
+                    "link_to_view": "1",
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": "30",
+                    "offset": 0,
+                    "path": "bandmember-view",
+                    "fields_override": null,
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "bfbbbaba-ad4e-43f5-a75b-91ce33d55bb5",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "db98e100-cd88-42d3-be00-fe2d76fda3b5": {
+            "plugin": "views:gigs_with_recordings-block",
+            "data": {
+                "module": "views",
+                "delta": "gigs_with_recordings-block",
+                "settings": {
+                    "link_to_view": 0,
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": 10,
+                    "offset": 0,
+                    "path": null,
+                    "fields_override": null,
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "db98e100-cd88-42d3-be00-fe2d76fda3b5",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "18544afc-7b1f-479e-aa02-2b79902527f5": {
+            "plugin": "views:bio_matching_bandmember_term-bandmember_photos",
+            "data": {
+                "module": "views",
+                "delta": "bio_matching_bandmember_term-bandmember_photos",
+                "settings": {
+                    "link_to_view": "1",
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": "30",
+                    "offset": 0,
+                    "path": "bandmember-view",
+                    "fields_override": null,
+                    "title_display": "custom",
+                    "title": "Photos",
+                    "style": "dynamic",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "18544afc-7b1f-479e-aa02-2b79902527f5",
+                "style": {
+                    "plugin": "dynamic",
+                    "data": {
+                        "settings": {
+                            "classes": "",
+                            "wrapper_tag": "aside",
+                            "title_tag": "h3",
+                            "title_classes": "block-title",
+                            "content_tag": "div",
+                            "content_classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "319e06c8-33d0-471f-a000-abe754642dbb": {
+            "plugin": "views:bio_matching_bandmember_term-block_1",
+            "data": {
+                "module": "views",
+                "delta": "bio_matching_bandmember_term-block_1",
+                "settings": {
+                    "link_to_view": "1",
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": "30",
+                    "offset": 0,
+                    "path": "bandmember-view",
+                    "fields_override": null,
+                    "title_display": "default",
+                    "title": "Videos",
+                    "style": "dynamic",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "319e06c8-33d0-471f-a000-abe754642dbb",
+                "style": {
+                    "plugin": "dynamic",
+                    "data": {
+                        "settings": {
+                            "classes": "",
+                            "wrapper_tag": "section",
+                            "title_tag": "h3",
+                            "title_classes": "block-title",
+                            "content_tag": "div",
+                            "content_classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "1fb812dc-b86a-4b08-9107-7abca7fea724": {
+            "plugin": "menu:menu-footer-menu",
+            "data": {
+                "module": "menu",
+                "delta": "menu-footer-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "menu-footer-menu",
+                        "style": "dropdown",
+                        "level": "1",
+                        "depth": "0",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 0
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "1fb812dc-b86a-4b08-9107-7abca7fea724",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": "footer-menu"
+                        }
+                    }
+                }
+            }
+        },
+        "33c84b90-599f-4cd1-8a00-eb6e4b2698fb": {
+            "plugin": "system:powered-by",
+            "data": {
+                "module": "system",
+                "delta": "powered-by",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "33c84b90-599f-4cd1-8a00-eb6e4b2698fb",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

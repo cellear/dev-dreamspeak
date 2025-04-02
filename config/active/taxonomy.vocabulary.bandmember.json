@@ -1,0 +1,9 @@
+{
+    "_config_name": "taxonomy.vocabulary.bandmember",
+    "name": "Bandmember",
+    "machine_name": "bandmember",
+    "description": "Tag objects to associate them with a member of the band",
+    "hierarchy": "0",
+    "language": 0,
+    "weight": 0
+}

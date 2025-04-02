@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.logo_block_40",
+    "delta": "logo_block_40",
+    "info": "Logo Block - 40%",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<a href=\"/\"><img alt=\"\" data-align=\"center\" data-file-id=\"37\" src=\"/files/inline-images/dreamspeak-sun-logo.png\" width=\"80%\" /></a>",
+        "format": "full_html"
+    },
+    "default_langcode": "und"
+}

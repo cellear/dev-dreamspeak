@@ -1,0 +1,1628 @@
+{
+    "_config_name": "views.view.bio_matching_bandmember_term",
+    "name": "bio_matching_bandmember_term",
+    "description": "Display blocks that match a term",
+    "tag": "default",
+    "disabled": false,
+    "base_table": "node",
+    "human_name": "Content matching bandmember term",
+    "core": "1.19.1",
+    "display": {
+        "default": {
+            "display_title": "Master",
+            "display_plugin": "default",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "access": {
+                    "type": "perm",
+                    "perm": "access content"
+                },
+                "cache": {
+                    "type": "none"
+                },
+                "exposed_form": {
+                    "type": "basic"
+                },
+                "pager": {
+                    "type": "some",
+                    "options": {
+                        "items_per_page": "30",
+                        "offset": "0"
+                    }
+                },
+                "style_plugin": "default",
+                "row_plugin": "node",
+                "fields": {
+                    "title": {
+                        "id": "title",
+                        "table": "node",
+                        "field": "title",
+                        "label": "",
+                        "alter": {
+                            "alter_text": 0,
+                            "make_link": 0,
+                            "absolute": 0,
+                            "trim": 0,
+                            "word_boundary": 0,
+                            "ellipsis": 0,
+                            "strip_tags": 0,
+                            "html": 0
+                        },
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "link_to_node": 1
+                    },
+                    "field_photo": {
+                        "id": "field_photo",
+                        "table": "field_data_field_photo",
+                        "field": "field_photo"
+                    },
+                    "body": {
+                        "id": "body",
+                        "table": "field_data_body",
+                        "field": "body",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "value",
+                        "type": "text_default",
+                        "settings": [],
+                        "group_column": "value",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    },
+                    "field_cover_photo": {
+                        "id": "field_cover_photo",
+                        "table": "field_data_field_cover_photo",
+                        "field": "field_cover_photo"
+                    }
+                },
+                "filters": {
+                    "status": {
+                        "value": 1,
+                        "table": "node",
+                        "field": "status",
+                        "id": "status",
+                        "expose": {
+                            "operator": false
+                        },
+                        "group": 1
+                    }
+                },
+                "sorts": [],
+                "title": "Content matching bandmember term",
+                "row_options": {
+                    "relationship": "none",
+                    "view_mode": "full",
+                    "title": 0,
+                    "links": 0,
+                    "comments": 0
+                },
+                "arguments": {
+                    "field_bandmember_tid": {
+                        "id": "field_bandmember_tid",
+                        "table": "field_data_field_bandmember",
+                        "field": "field_bandmember_tid",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "default_action": "summary",
+                        "exception": {
+                            "value": "all",
+                            "title_enable": 0,
+                            "title": "All"
+                        },
+                        "title_enable": 1,
+                        "title": "Results for %1 ",
+                        "breadcrumb_enable": 0,
+                        "breadcrumb": "",
+                        "default_argument_type": "fixed",
+                        "default_argument_options": {
+                            "argument": "gordon"
+                        },
+                        "default_argument_skip_url": 0,
+                        "summary_options": {
+                            "base_path": "",
+                            "count": "1",
+                            "items_per_page": "25",
+                            "override": 0
+                        },
+                        "summary": {
+                            "sort_order": "asc",
+                            "number_of_records": "0",
+                            "format": "default_summary"
+                        },
+                        "specify_validation": 1,
+                        "validate": {
+                            "type": "taxonomy_term",
+                            "fail": "ignore"
+                        },
+                        "validate_options": {
+                            "vocabularies": {
+                                "bandmember": "bandmember"
+                            },
+                            "type": "convert",
+                            "transform": "1"
+                        },
+                        "break_phrase": 0,
+                        "not": 0
+                    }
+                },
+                "header": [],
+                "empty": {
+                    "area": {
+                        "id": "area",
+                        "table": "views",
+                        "field": "area",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "No Results",
+                        "empty": true,
+                        "content": "<p>Nothing here, brah</p>\r\n",
+                        "format": "filtered_html",
+                        "tokenize": 0
+                    }
+                },
+                "filter_groups": {
+                    "operator": "AND",
+                    "groups": {
+                        "1": "AND"
+                    }
+                }
+            }
+        },
+        "block": {
+            "display_title": "Block",
+            "display_plugin": "block",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "argument_input": {
+                    "tid": {
+                        "type": "fixed",
+                        "position": "1",
+                        "context_optional": 0,
+                        "fixed": "doug",
+                        "label": "Content: Has taxonomy term ID"
+                    }
+                },
+                "block_description": "All content matching bandmember term (delete)",
+                "link_to_view": "1"
+            }
+        },
+        "page_1": {
+            "display_title": "Page",
+            "display_plugin": "page",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "path": "bandmember-view"
+            }
+        },
+        "bandmember_bio": {
+            "display_title": "bandmember-bio",
+            "display_plugin": "block",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "argument_input": {
+                    "field_bandmember_tid": {
+                        "type": "url",
+                        "position": "1",
+                        "context_optional": 0,
+                        "fixed": "",
+                        "label": "Bandmember Bio Input"
+                    }
+                },
+                "block_description": "A1 -  Bio matching bandmember term",
+                "link_to_view": "1",
+                "display_description": "Will display the bio associated with a bandmember term",
+                "filters": {
+                    "status": {
+                        "value": 1,
+                        "table": "node",
+                        "field": "status",
+                        "id": "status",
+                        "expose": {
+                            "operator": false
+                        },
+                        "group": 1
+                    },
+                    "type": {
+                        "id": "type",
+                        "table": "node",
+                        "field": "type",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "operator": "in",
+                        "value": {
+                            "bio": "bio"
+                        },
+                        "group": "1",
+                        "exposed": false,
+                        "expose": {
+                            "operator_id": false,
+                            "label": "",
+                            "description": "",
+                            "use_operator": false,
+                            "operator": "",
+                            "identifier": "",
+                            "required": false,
+                            "remember": false,
+                            "multiple": false,
+                            "remember_roles": {
+                                "authenticated": "authenticated"
+                            },
+                            "reduce": false
+                        },
+                        "is_grouped": false,
+                        "group_info": {
+                            "label": "",
+                            "description": "",
+                            "identifier": "",
+                            "optional": true,
+                            "widget": "select",
+                            "multiple": false,
+                            "remember": 0,
+                            "default_group": "All",
+                            "default_group_multiple": [],
+                            "group_items": []
+                        }
+                    }
+                },
+                "defaults": {
+                    "filters": false,
+                    "filter_groups": false,
+                    "title": false,
+                    "arguments": false,
+                    "empty": false,
+                    "style_plugin": false,
+                    "style_options": false,
+                    "row_plugin": false,
+                    "row_options": false,
+                    "fields": false
+                },
+                "filter_groups": {
+                    "operator": "AND",
+                    "groups": {
+                        "1": "AND"
+                    }
+                },
+                "title": "Bio",
+                "inherit_path": "1",
+                "arguments": {
+                    "field_bandmember_tid": {
+                        "id": "field_bandmember_tid",
+                        "table": "field_data_field_bandmember",
+                        "field": "field_bandmember_tid",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "default_action": "summary",
+                        "exception": {
+                            "value": "all",
+                            "title_enable": 0,
+                            "title": "All"
+                        },
+                        "title_enable": 1,
+                        "title": "Bio for %1 ",
+                        "breadcrumb_enable": 0,
+                        "breadcrumb": "",
+                        "default_argument_type": "fixed",
+                        "default_argument_options": {
+                            "argument": "gordon"
+                        },
+                        "default_argument_skip_url": 0,
+                        "summary_options": {
+                            "base_path": "",
+                            "count": "1",
+                            "items_per_page": "25",
+                            "override": 0
+                        },
+                        "summary": {
+                            "sort_order": "asc",
+                            "number_of_records": "0",
+                            "format": "default_summary"
+                        },
+                        "specify_validation": 1,
+                        "validate": {
+                            "type": "taxonomy_term",
+                            "fail": "empty"
+                        },
+                        "validate_options": {
+                            "vocabularies": {
+                                "bandmember": "bandmember"
+                            },
+                            "type": "convert",
+                            "transform": 0
+                        },
+                        "break_phrase": 0,
+                        "not": 0
+                    }
+                },
+                "empty": {
+                    "area": {
+                        "id": "area",
+                        "table": "views",
+                        "field": "area",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "No bio message",
+                        "empty": true,
+                        "content": "<p>No Bio found for&nbsp;!1&nbsp;</p>\r\n\r\n<p>no term&nbsp;%1</p>\r\n",
+                        "format": "filtered_html",
+                        "tokenize": 1
+                    }
+                },
+                "style_plugin": "default",
+                "style_options": [],
+                "row_plugin": "fields",
+                "row_options": {
+                    "default_field_elements": 1,
+                    "inline": [],
+                    "separator": "",
+                    "hide_empty": 0
+                },
+                "fields": {
+                    "title": {
+                        "id": "title",
+                        "table": "node",
+                        "field": "title",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 0,
+                            "ellipsis": 0,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "h1",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "link_to_node": 1
+                    },
+                    "field_cover_photo": {
+                        "id": "field_cover_photo",
+                        "table": "field_data_field_cover_photo",
+                        "field": "field_cover_photo",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "fid",
+                        "type": "image",
+                        "settings": {
+                            "image_style": "400_pixels_wide",
+                            "image_link": "",
+                            "image_float": "right",
+                            "image_load": "auto"
+                        },
+                        "group_column": "",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    },
+                    "body": {
+                        "id": "body",
+                        "table": "field_data_body",
+                        "field": "body",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "value",
+                        "type": "text_default",
+                        "settings": [],
+                        "group_column": "value",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    }
+                }
+            }
+        },
+        "bandmember_photos": {
+            "display_title": "bandmember-photos",
+            "display_plugin": "block",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "argument_input": {
+                    "field_bandmember_tid": {
+                        "type": "url",
+                        "position": "1",
+                        "context_optional": 0,
+                        "fixed": "",
+                        "label": "Bandmember Photo term Input"
+                    }
+                },
+                "block_description": "A2 - Photos matching bandmember term",
+                "link_to_view": "1",
+                "display_description": "Will display all photos associated with a bandmember term",
+                "filters": {
+                    "status": {
+                        "value": 1,
+                        "table": "node",
+                        "field": "status",
+                        "id": "status",
+                        "expose": {
+                            "operator": false
+                        },
+                        "group": 1
+                    },
+                    "type": {
+                        "id": "type",
+                        "table": "node",
+                        "field": "type",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "operator": "in",
+                        "value": {
+                            "photos": "photos"
+                        },
+                        "group": "1",
+                        "exposed": false,
+                        "expose": {
+                            "operator_id": false,
+                            "label": "",
+                            "description": "",
+                            "use_operator": false,
+                            "operator": "",
+                            "identifier": "",
+                            "required": false,
+                            "remember": false,
+                            "multiple": false,
+                            "remember_roles": {
+                                "authenticated": "authenticated"
+                            },
+                            "reduce": false
+                        },
+                        "is_grouped": false,
+                        "group_info": {
+                            "label": "",
+                            "description": "",
+                            "identifier": "",
+                            "optional": true,
+                            "widget": "select",
+                            "multiple": false,
+                            "remember": 0,
+                            "default_group": "All",
+                            "default_group_multiple": [],
+                            "group_items": []
+                        }
+                    }
+                },
+                "defaults": {
+                    "filters": false,
+                    "filter_groups": false,
+                    "style_plugin": false,
+                    "style_options": false,
+                    "row_plugin": false,
+                    "row_options": false,
+                    "fields": false,
+                    "title": false,
+                    "arguments": false,
+                    "empty": false
+                },
+                "filter_groups": {
+                    "operator": "AND",
+                    "groups": {
+                        "1": "AND"
+                    }
+                },
+                "style_plugin": "grid",
+                "style_options": {
+                    "grouping": [],
+                    "row_class": "",
+                    "default_row_class": 1,
+                    "row_class_special": 1,
+                    "columns": "2",
+                    "alignment": "horizontal",
+                    "deprecated_table": 0,
+                    "fill_single_line": 1,
+                    "caption": "",
+                    "summary": ""
+                },
+                "row_plugin": "fields",
+                "row_options": {
+                    "default_field_elements": 0,
+                    "inline": [],
+                    "separator": "",
+                    "hide_empty": 0
+                },
+                "fields": {
+                    "field_photo": {
+                        "id": "field_photo",
+                        "table": "field_data_field_photo",
+                        "field": "field_photo",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "fid",
+                        "type": "image",
+                        "settings": {
+                            "image_style": "medium",
+                            "image_link": "content",
+                            "image_float": "",
+                            "image_load": "auto"
+                        },
+                        "group_column": "",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    }
+                },
+                "title": "Photos",
+                "arguments": {
+                    "field_bandmember_tid": {
+                        "id": "field_bandmember_tid",
+                        "table": "field_data_field_bandmember",
+                        "field": "field_bandmember_tid",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "default_action": "summary",
+                        "exception": {
+                            "value": "all",
+                            "title_enable": 0,
+                            "title": "All"
+                        },
+                        "title_enable": 1,
+                        "title": "Photos for %1 ",
+                        "breadcrumb_enable": 0,
+                        "breadcrumb": "",
+                        "default_argument_type": "fixed",
+                        "default_argument_options": {
+                            "argument": "gordon"
+                        },
+                        "default_argument_skip_url": 0,
+                        "summary_options": {
+                            "base_path": "",
+                            "count": "1",
+                            "items_per_page": "25",
+                            "override": 0
+                        },
+                        "summary": {
+                            "sort_order": "asc",
+                            "number_of_records": "0",
+                            "format": "default_summary"
+                        },
+                        "specify_validation": 1,
+                        "validate": {
+                            "type": "taxonomy_term",
+                            "fail": "empty"
+                        },
+                        "validate_options": {
+                            "vocabularies": {
+                                "bandmember": "bandmember"
+                            },
+                            "type": "convert",
+                            "transform": 0
+                        },
+                        "break_phrase": 0,
+                        "not": 0
+                    }
+                },
+                "empty": {
+                    "area": {
+                        "id": "area",
+                        "table": "views",
+                        "field": "area",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "No photos",
+                        "empty": true,
+                        "content": "<p>No photos found for&nbsp;%1 (!1)</p>\r\n",
+                        "format": "filtered_html",
+                        "tokenize": 1
+                    }
+                }
+            }
+        },
+        "block_1": {
+            "display_title": "bandmember-videos",
+            "display_plugin": "block",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "argument_input": {
+                    "field_bandmember_tid": {
+                        "type": "url",
+                        "position": "1",
+                        "context_optional": 0,
+                        "fixed": "",
+                        "label": "Bandmember Video term Input"
+                    }
+                },
+                "block_description": "A3 - Videos matching bandmember term",
+                "link_to_view": "1",
+                "display_description": "Will display all videos associated with a bandmember term",
+                "defaults": {
+                    "filters": true,
+                    "filter_groups": true,
+                    "style_plugin": false,
+                    "style_options": false,
+                    "row_plugin": false,
+                    "row_options": false,
+                    "fields": false,
+                    "title": false,
+                    "arguments": false
+                },
+                "style_plugin": "default",
+                "style_options": {
+                    "grouping": [],
+                    "row_class": "",
+                    "default_row_class": 1,
+                    "row_class_special": 1
+                },
+                "row_plugin": "fields",
+                "row_options": {
+                    "default_field_elements": 0,
+                    "inline": [],
+                    "separator": "",
+                    "hide_empty": 0
+                },
+                "fields": {
+                    "field_youtube_url": {
+                        "id": "field_youtube_url",
+                        "table": "field_data_field_youtube_url",
+                        "field": "field_youtube_url",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "input",
+                        "type": "youtube_video",
+                        "settings": {
+                            "youtube_size": "custom",
+                            "youtube_width": "200",
+                            "youtube_height": "150",
+                            "youtube_autoplay": 0,
+                            "youtube_loop": 0,
+                            "youtube_showinfo": 1,
+                            "youtube_controls": 0,
+                            "youtube_autohide": 0,
+                            "youtube_iv_load_policy": 0
+                        },
+                        "group_column": "",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    }
+                },
+                "title": "Videos",
+                "arguments": {
+                    "field_bandmember_tid": {
+                        "id": "field_bandmember_tid",
+                        "table": "field_data_field_bandmember",
+                        "field": "field_bandmember_tid",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "default_action": "summary",
+                        "exception": {
+                            "value": "all",
+                            "title_enable": 0,
+                            "title": "All"
+                        },
+                        "title_enable": 0,
+                        "title": "",
+                        "breadcrumb_enable": 0,
+                        "breadcrumb": "",
+                        "default_argument_type": "fixed",
+                        "default_argument_options": {
+                            "argument": "gordon"
+                        },
+                        "default_argument_skip_url": 0,
+                        "summary_options": {
+                            "base_path": "",
+                            "count": "1",
+                            "items_per_page": "25",
+                            "override": 0
+                        },
+                        "summary": {
+                            "sort_order": "asc",
+                            "number_of_records": "0",
+                            "format": "default_summary"
+                        },
+                        "specify_validation": 1,
+                        "validate": {
+                            "type": "taxonomy_term",
+                            "fail": "ignore"
+                        },
+                        "validate_options": {
+                            "vocabularies": {
+                                "bandmember": "bandmember"
+                            },
+                            "type": "convert",
+                            "transform": "1"
+                        },
+                        "break_phrase": 0,
+                        "not": 0
+                    }
+                }
+            }
+        },
+        "block_2": {
+            "display_title": "bandmember-posts",
+            "display_plugin": "block",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "argument_input": {
+                    "field_bandmember_tid": {
+                        "type": "url",
+                        "position": "1",
+                        "context_optional": 0,
+                        "fixed": "",
+                        "label": "Bandmember Photo term Input"
+                    }
+                },
+                "block_description": "A5 - Posts matching bandmember term",
+                "link_to_view": "1",
+                "display_description": "Will display all photos associated with a bandmember term",
+                "filters": {
+                    "status": {
+                        "value": 1,
+                        "table": "node",
+                        "field": "status",
+                        "id": "status",
+                        "expose": {
+                            "operator": false
+                        },
+                        "group": 1
+                    },
+                    "type": {
+                        "id": "type",
+                        "table": "node",
+                        "field": "type",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "operator": "in",
+                        "value": {
+                            "post": "post"
+                        },
+                        "group": "1",
+                        "exposed": false,
+                        "expose": {
+                            "operator_id": false,
+                            "label": "",
+                            "description": "",
+                            "use_operator": false,
+                            "operator": "",
+                            "identifier": "",
+                            "required": false,
+                            "remember": false,
+                            "multiple": false,
+                            "remember_roles": {
+                                "authenticated": "authenticated"
+                            },
+                            "reduce": false
+                        },
+                        "is_grouped": false,
+                        "group_info": {
+                            "label": "",
+                            "description": "",
+                            "identifier": "",
+                            "optional": true,
+                            "widget": "select",
+                            "multiple": false,
+                            "remember": 0,
+                            "default_group": "All",
+                            "default_group_multiple": [],
+                            "group_items": []
+                        }
+                    }
+                },
+                "defaults": {
+                    "filters": false,
+                    "filter_groups": false,
+                    "style_plugin": false,
+                    "style_options": false,
+                    "row_plugin": false,
+                    "row_options": false,
+                    "fields": false,
+                    "title": false,
+                    "arguments": false,
+                    "empty": false
+                },
+                "filter_groups": {
+                    "operator": "AND",
+                    "groups": {
+                        "1": "AND"
+                    }
+                },
+                "style_plugin": "grid",
+                "style_options": {
+                    "grouping": [],
+                    "row_class": "",
+                    "default_row_class": 1,
+                    "row_class_special": 1,
+                    "columns": "2",
+                    "alignment": "horizontal",
+                    "deprecated_table": 0,
+                    "fill_single_line": 1,
+                    "caption": "",
+                    "summary": ""
+                },
+                "row_plugin": "fields",
+                "row_options": {
+                    "default_field_elements": 0,
+                    "inline": [],
+                    "separator": "",
+                    "hide_empty": 0
+                },
+                "fields": {
+                    "field_photo": {
+                        "id": "field_photo",
+                        "table": "field_data_field_photo",
+                        "field": "field_photo",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "fid",
+                        "type": "image",
+                        "settings": {
+                            "image_style": "medium",
+                            "image_link": "content",
+                            "image_float": "",
+                            "image_load": "auto"
+                        },
+                        "group_column": "",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    },
+                    "field_author": {
+                        "id": "field_author",
+                        "table": "field_data_field_author",
+                        "field": "field_author",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "tid",
+                        "type": "taxonomy_term_reference_link",
+                        "settings": [],
+                        "group_column": "tid",
+                        "group_columns": [],
+                        "group_rows": 1,
+                        "delta_limit": "all",
+                        "delta_offset": "0",
+                        "delta_reversed": 0,
+                        "delta_first_last": 0,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    },
+                    "body": {
+                        "id": "body",
+                        "table": "field_data_body",
+                        "field": "body",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "value",
+                        "type": "text_default",
+                        "settings": [],
+                        "group_column": "value",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    }
+                },
+                "title": "Posts",
+                "arguments": {
+                    "field_bandmember_tid": {
+                        "id": "field_bandmember_tid",
+                        "table": "field_data_field_bandmember",
+                        "field": "field_bandmember_tid",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "default_action": "summary",
+                        "exception": {
+                            "value": "all",
+                            "title_enable": 0,
+                            "title": "All"
+                        },
+                        "title_enable": 1,
+                        "title": "Photos for %1 ",
+                        "breadcrumb_enable": 0,
+                        "breadcrumb": "",
+                        "default_argument_type": "fixed",
+                        "default_argument_options": {
+                            "argument": "gordon"
+                        },
+                        "default_argument_skip_url": 0,
+                        "summary_options": {
+                            "base_path": "",
+                            "count": "1",
+                            "items_per_page": "25",
+                            "override": 0
+                        },
+                        "summary": {
+                            "sort_order": "asc",
+                            "number_of_records": "0",
+                            "format": "default_summary"
+                        },
+                        "specify_validation": 1,
+                        "validate": {
+                            "type": "taxonomy_term",
+                            "fail": "empty"
+                        },
+                        "validate_options": {
+                            "vocabularies": {
+                                "bandmember": "bandmember"
+                            },
+                            "type": "convert",
+                            "transform": 0
+                        },
+                        "break_phrase": 0,
+                        "not": 0
+                    }
+                },
+                "empty": []
+            }
+        },
+        "block_3": {
+            "display_title": "bandmember-websites",
+            "display_plugin": "block",
+            "display_options": {
+                "query": {
+                    "type": "views_query",
+                    "options": []
+                },
+                "argument_input": {
+                    "field_bandmember_tid": {
+                        "type": "url",
+                        "position": "1",
+                        "context_optional": 0,
+                        "fixed": "",
+                        "label": "Bandmember Photo term Input"
+                    }
+                },
+                "block_description": "A6 - Websites matching bandmember term",
+                "link_to_view": "1",
+                "display_description": "Will display all photos associated with a bandmember term",
+                "filters": {
+                    "status": {
+                        "value": 1,
+                        "table": "node",
+                        "field": "status",
+                        "id": "status",
+                        "expose": {
+                            "operator": false
+                        },
+                        "group": 1
+                    },
+                    "type": {
+                        "id": "type",
+                        "table": "node",
+                        "field": "type",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "operator": "in",
+                        "value": {
+                            "post": "post",
+                            "website": "website"
+                        },
+                        "group": "1",
+                        "exposed": false,
+                        "expose": {
+                            "operator_id": false,
+                            "label": "",
+                            "description": "",
+                            "use_operator": false,
+                            "operator": "",
+                            "identifier": "",
+                            "required": false,
+                            "remember": false,
+                            "multiple": false,
+                            "remember_roles": {
+                                "authenticated": "authenticated"
+                            },
+                            "reduce": false
+                        },
+                        "is_grouped": false,
+                        "group_info": {
+                            "label": "",
+                            "description": "",
+                            "identifier": "",
+                            "optional": true,
+                            "widget": "select",
+                            "multiple": false,
+                            "remember": 0,
+                            "default_group": "All",
+                            "default_group_multiple": [],
+                            "group_items": []
+                        }
+                    }
+                },
+                "defaults": {
+                    "filters": false,
+                    "filter_groups": false,
+                    "style_plugin": false,
+                    "style_options": false,
+                    "row_plugin": false,
+                    "row_options": false,
+                    "fields": false,
+                    "title": false,
+                    "arguments": false,
+                    "empty": false
+                },
+                "filter_groups": {
+                    "operator": "AND",
+                    "groups": {
+                        "1": "AND"
+                    }
+                },
+                "style_plugin": "list",
+                "style_options": {
+                    "grouping": [],
+                    "row_class": "",
+                    "default_row_class": 1,
+                    "row_class_special": 1,
+                    "type": "ul",
+                    "wrapper_class": "item-list",
+                    "class": ""
+                },
+                "row_plugin": "fields",
+                "row_options": {
+                    "default_field_elements": 0,
+                    "inline": [],
+                    "separator": "",
+                    "hide_empty": 0
+                },
+                "fields": {
+                    "field_url": {
+                        "id": "field_url",
+                        "table": "field_data_field_url",
+                        "field": "field_url",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "label": "",
+                        "exclude": 0,
+                        "alter": {
+                            "alter_text": 0,
+                            "text": "",
+                            "make_link": 0,
+                            "path": "",
+                            "absolute": 0,
+                            "external": 0,
+                            "replace_spaces": 0,
+                            "path_case": "none",
+                            "trim_whitespace": 0,
+                            "alt": "",
+                            "rel": "",
+                            "link_class": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "target": "",
+                            "nl2br": 0,
+                            "max_length": "",
+                            "word_boundary": 1,
+                            "ellipsis": 1,
+                            "more_link": 0,
+                            "more_link_text": "",
+                            "more_link_path": "",
+                            "strip_tags": 0,
+                            "trim": 0,
+                            "preserve_tags": "",
+                            "html": 0
+                        },
+                        "element_type": "",
+                        "element_class": "",
+                        "element_label_type": "",
+                        "element_label_class": "",
+                        "element_label_colon": false,
+                        "element_wrapper_type": "",
+                        "element_wrapper_class": "",
+                        "element_default_classes": 1,
+                        "empty": "",
+                        "hide_empty": 0,
+                        "empty_zero": 0,
+                        "hide_alter_empty": 1,
+                        "click_sort_column": "url",
+                        "type": "link_default",
+                        "settings": [],
+                        "group_column": "",
+                        "group_columns": [],
+                        "group_rows": true,
+                        "delta_limit": "all",
+                        "delta_offset": 0,
+                        "delta_reversed": false,
+                        "delta_first_last": false,
+                        "multi_type": "separator",
+                        "separator": ", ",
+                        "field_api_classes": 0
+                    }
+                },
+                "title": "Posts",
+                "arguments": {
+                    "field_bandmember_tid": {
+                        "id": "field_bandmember_tid",
+                        "table": "field_data_field_bandmember",
+                        "field": "field_bandmember_tid",
+                        "relationship": "none",
+                        "group_type": "group",
+                        "ui_name": "",
+                        "default_action": "summary",
+                        "exception": {
+                            "value": "all",
+                            "title_enable": 0,
+                            "title": "All"
+                        },
+                        "title_enable": 1,
+                        "title": "Photos for %1 ",
+                        "breadcrumb_enable": 0,
+                        "breadcrumb": "",
+                        "default_argument_type": "fixed",
+                        "default_argument_options": {
+                            "argument": "gordon"
+                        },
+                        "default_argument_skip_url": 0,
+                        "summary_options": {
+                            "base_path": "",
+                            "count": "1",
+                            "items_per_page": "25",
+                            "override": 0
+                        },
+                        "summary": {
+                            "sort_order": "asc",
+                            "number_of_records": "0",
+                            "format": "default_summary"
+                        },
+                        "specify_validation": 1,
+                        "validate": {
+                            "type": "taxonomy_term",
+                            "fail": "empty"
+                        },
+                        "validate_options": {
+                            "vocabularies": {
+                                "bandmember": "bandmember"
+                            },
+                            "type": "convert",
+                            "transform": 0
+                        },
+                        "break_phrase": 0,
+                        "not": 0
+                    }
+                },
+                "empty": []
+            }
+        }
+    }
+}

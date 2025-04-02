@@ -1,0 +1,9 @@
+{
+    "_config_name": "taxonomy.vocabulary.poster_type",
+    "name": "Art Type",
+    "machine_name": "poster_type",
+    "description": "",
+    "hierarchy": "0",
+    "language": 0,
+    "weight": 0
+}

@@ -1,0 +1,30 @@
+{
+    "_config_name": "field.instance.node.pile.field_category",
+    "field_name": "field_category",
+    "entity_type": "node",
+    "bundle": "pile",
+    "label": "Category",
+    "widget": {
+        "weight": "3",
+        "type": "options_buttons",
+        "module": "options",
+        "active": 1,
+        "settings": []
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "2",
+            "settings": []
+        }
+    }
+}

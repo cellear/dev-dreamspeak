@@ -1,0 +1,9 @@
+{
+    "_config_name": "taxonomy.vocabulary.photo_category",
+    "name": "Photo Category",
+    "machine_name": "photo_category",
+    "description": "What kind of Photo is this?",
+    "hierarchy": "0",
+    "language": 0,
+    "weight": 0
+}

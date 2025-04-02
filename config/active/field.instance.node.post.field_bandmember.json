@@ -1,0 +1,31 @@
+{
+    "_config_name": "field.instance.node.post.field_bandmember",
+    "field_name": "field_bandmember",
+    "entity_type": "node",
+    "bundle": "post",
+    "label": "bandmember (taxonomy tag)",
+    "widget": {
+        "weight": "5",
+        "type": "options_buttons",
+        "module": "options",
+        "active": 1,
+        "settings": []
+    },
+    "description": "Is this post about any band members, specifically?  (Not just were they there, but is this post specifically about them?)",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "taxonomy_term_reference_link",
+            "settings": [],
+            "module": "taxonomy",
+            "weight": 13
+        }
+    }
+}

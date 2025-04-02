@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.add_gig_term",
+    "delta": "add_gig_term",
+    "info": "Add gig term",
+    "title": "",
+    "description": "Add a gig -- gigs are terms, which can be a little confusing",
+    "body": {
+        "value": "<p><a href=\"/admin/structure/taxonomy/gig/add\" title=\"Click here to add a gig.  A gig is anything the band does on a specific date.\">Add a Gig</a></p>\r\n",
+        "format": "filtered_html"
+    },
+    "default_langcode": "und"
+}

@@ -1,0 +1,350 @@
+{
+    "_config_name": "layout.layout.splashpage",
+    "path": "splashpage",
+    "name": "splashpage",
+    "title": "Splash Page",
+    "description": null,
+    "renderer_name": "standard",
+    "module": null,
+    "weight": 0,
+    "storage": 1,
+    "layout_template": "moscone_flipped",
+    "disabled": false,
+    "settings": {
+        "title": "",
+        "title_display": "none",
+        "title_block": "d8656a39-f443-41f2-8851-81c90088542d"
+    },
+    "positions": {
+        "header": [],
+        "top": [
+            "8487e82f-47d1-4f5e-8600-c5106a380406",
+            "cbbda4ab-de3d-4a48-a609-9f8dc73c017b",
+            "243072ac-1333-4a2e-875f-95fb50a8859d"
+        ],
+        "content": [
+            "b3649004-ad9e-4fa3-9507-7b8a752aa5a8",
+            "d8656a39-f443-41f2-8851-81c90088542d"
+        ],
+        "sidebar": [
+            "b8f5984f-1e4e-4448-bd34-52a2959927fe"
+        ],
+        "bottom": [],
+        "footer": [
+            "73600719-c662-47d9-ae07-0731fe67dcd2",
+            "d3d2247b-b543-4897-8400-d8270715ae06"
+        ],
+        "title": []
+    },
+    "contexts": [],
+    "relationships": [],
+    "content": {
+        "8487e82f-47d1-4f5e-8600-c5106a380406": {
+            "plugin": "layout:hero",
+            "data": {
+                "status": 1,
+                "module": "layout",
+                "delta": "hero",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "content": "<img src=\"/files/hero/zooming-rat-a3.jpg\" width=\"85%\">",
+                    "format": "full_html",
+                    "image": "119",
+                    "image_path": "/files/hero/zoom-rat-a3a-11squares.jpg",
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "8487e82f-47d1-4f5e-8600-c5106a380406",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": "zooming-rat-image"
+                        }
+                    }
+                }
+            }
+        },
+        "cbbda4ab-de3d-4a48-a609-9f8dc73c017b": {
+            "plugin": "block:logo_block_100_width",
+            "data": {
+                "status": 1,
+                "module": "block",
+                "delta": "logo_block_100_width",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "configurable",
+                    "block_settings": {
+                        "delta": "logo_block_100_width",
+                        "description": "",
+                        "reusable": true
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "cbbda4ab-de3d-4a48-a609-9f8dc73c017b",
+                "style": {
+                    "plugin": "configurable",
+                    "data": {
+                        "settings": {
+                            "classes": "ds-logo-block",
+                            "content_container": 0,
+                            "content_padding": 0,
+                            "color_type": "default",
+                            "background_color": "#ffffff",
+                            "text_color": "#000000",
+                            "padding_top": "40",
+                            "padding_right": "30",
+                            "padding_bottom": "30",
+                            "padding_left": "30",
+                            "height_type": "default",
+                            "height_amount": "500",
+                            "mn_height_amount": "250",
+                            "rel_height_amount": "40",
+                            "mx_height_amount": "500",
+                            "tint": 0,
+                            "tint_value": "0",
+                            "height_unit": "px"
+                        }
+                    }
+                }
+            }
+        },
+        "243072ac-1333-4a2e-875f-95fb50a8859d": {
+            "plugin": "system:main-menu",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "configurable",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "top_only",
+                        "level": "1",
+                        "depth": "1",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 0
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "243072ac-1333-4a2e-875f-95fb50a8859d",
+                "style": {
+                    "plugin": "configurable",
+                    "data": {
+                        "settings": {
+                            "classes": "front-page-menu",
+                            "content_container": 0,
+                            "content_padding": 1,
+                            "color_type": "default",
+                            "background_color": "#ffffff",
+                            "text_color": "#000000",
+                            "padding_top": "40",
+                            "padding_right": "30",
+                            "padding_bottom": "30",
+                            "padding_left": "30",
+                            "height_type": "default",
+                            "height_amount": "500",
+                            "mn_height_amount": "250",
+                            "rel_height_amount": "40",
+                            "mx_height_amount": "500",
+                            "tint": 0,
+                            "tint_value": "0",
+                            "height_unit": "px"
+                        }
+                    }
+                }
+            }
+        },
+        "b3649004-ad9e-4fa3-9507-7b8a752aa5a8": {
+            "plugin": "layout:custom_block",
+            "data": {
+                "status": 1,
+                "module": "layout",
+                "delta": "custom_block",
+                "settings": {
+                    "title_display": "default",
+                    "title": "NEW ALBUM: At The Art Farm",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "content": "<p><a href=\"/gig/2025-at-the-art-farm-ep\"><img alt=\"Cover art for Dreamspeak At The Art Farm\" data-align=\"left\" data-file-id=\"178\" height=\"192\" src=\"/files/inline-images/campdreamspeak2-25-ep-cover-medium.jpeg\" width=\"192\" /></a></p>\r\n\r\n<p>The long lost Dreamspeak 5 song EP, recorded in the studio at The Art Farm prior to the Camp Dreamspeak show in September 2000, has been found, mixed and is now out on all streaming platforms!</p>\r\n\r\n<p class=\"text-align-center\"><a href=\"https://dreamspeak2.bandcamp.com/album/at-the-art-farm\">BandCamp</a> |&nbsp;<a href=\"https://open.spotify.com/album/0D3IImODy6sNHuSKZH74yw\">Spotify</a>&nbsp;|&nbsp;<a href=\"https://music.youtube.com/playlist?list=OLAK5uy_lw93Xf6uwuBNqtndgmEX-7HyoXlMbw5E8\">YouTube</a>&nbsp;|&nbsp;<a href=\"https://music.apple.com/us/album/at-the-art-farm-ep/1782201741\">Apple</a>&nbsp;| <a href=\"https://music.amazon.com/albums/B0DP4GQCXS\">Amazon</a> |&nbsp;<a href=\"https://www.pandora.com/artist/dreamspeak/at-the-art-farm/ALV5VdgKVfcxjgg\">Pandora</a>&nbsp;| <a href=\"https://www.iheart.com/artist/dreamspeak-33097969/albums/at-the-art-farm-300902474/\">iHeart</a></p>\r\n\r\n<p class=\"text-align-center\">&nbsp;</p>\r\n\r\n<p class=\"text-align-center\">&nbsp;</p>\r\n",
+                    "format": "filtered_html",
+                    "admin_label": "The Art Farm New Release Blurb",
+                    "admin_description": ""
+                },
+                "uuid": "b3649004-ad9e-4fa3-9507-7b8a752aa5a8",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "d8656a39-f443-41f2-8851-81c90088542d": {
+            "plugin": "views:band_members-block_1",
+            "data": {
+                "status": 1,
+                "module": "views",
+                "delta": "band_members-block_1",
+                "settings": {
+                    "link_to_view": 0,
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": "100",
+                    "offset": 0,
+                    "path": "band-members",
+                    "fields_override": null,
+                    "title_display": "none",
+                    "title": "",
+                    "style": "configurable",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "d8656a39-f443-41f2-8851-81c90088542d",
+                "style": {
+                    "plugin": "configurable",
+                    "data": {
+                        "settings": {
+                            "classes": "",
+                            "content_container": 0,
+                            "content_padding": 0,
+                            "color_type": "default",
+                            "background_color": "#ffffff",
+                            "text_color": "#000000",
+                            "padding_top": "5",
+                            "padding_right": "6",
+                            "padding_bottom": "7",
+                            "padding_left": "8",
+                            "height_type": "default",
+                            "height_amount": "500",
+                            "mn_height_amount": "250",
+                            "rel_height_amount": "40",
+                            "mx_height_amount": "500",
+                            "tint": 0,
+                            "tint_value": "0",
+                            "height_unit": "px"
+                        }
+                    }
+                }
+            }
+        },
+        "b8f5984f-1e4e-4448-bd34-52a2959927fe": {
+            "plugin": "views:a_single_random_recording-block_1",
+            "data": {
+                "status": 1,
+                "module": "views",
+                "delta": "a_single_random_recording-block_1",
+                "settings": {
+                    "link_to_view": 0,
+                    "more_link": false,
+                    "use_pager": false,
+                    "pager_id": 0,
+                    "items_per_page": "1",
+                    "offset": 0,
+                    "path": null,
+                    "fields_override": null,
+                    "title_display": "custom",
+                    "title": "Random Radio",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "allowed": [],
+                    "path_override": false,
+                    "exposed": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "b8f5984f-1e4e-4448-bd34-52a2959927fe",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "73600719-c662-47d9-ae07-0731fe67dcd2": {
+            "plugin": "menu:menu-footer-menu",
+            "data": {
+                "status": 1,
+                "module": "menu",
+                "delta": "menu-footer-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "menu-footer-menu",
+                        "style": "dropdown",
+                        "level": "1",
+                        "depth": "0",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 0
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "73600719-c662-47d9-ae07-0731fe67dcd2",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "d3d2247b-b543-4897-8400-d8270715ae06": {
+            "plugin": "system:powered-by",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "powered-by",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "d3d2247b-b543-4897-8400-d8270715ae06",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

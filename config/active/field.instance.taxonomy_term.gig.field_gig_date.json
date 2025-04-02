@@ -1,0 +1,64 @@
+{
+    "_config_name": "field.instance.taxonomy_term.gig.field_gig_date",
+    "field_name": "field_gig_date",
+    "entity_type": "taxonomy_term",
+    "bundle": "gig",
+    "label": "Gig Date",
+    "widget": {
+        "weight": "4",
+        "type": "date_text",
+        "module": "date",
+        "active": 1,
+        "settings": {
+            "input_format": "Y-m-d",
+            "input_format_custom": "",
+            "year_range": "-3:+3",
+            "increment": 1,
+            "label_position": "none",
+            "text_parts": [],
+            "no_fieldset": 1
+        }
+    },
+    "description": "On what day did this event happen?\r\n\r\n(If you're not sure, take your best guess, and note it in the comments field)\r\n\r\nFormat year-month-date (1965-03-27)",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "default_value": "blank",
+        "default_value_code": "",
+        "default_value2": "same",
+        "default_value_code2": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "date_default",
+            "weight": "3",
+            "settings": {
+                "format_type": "short",
+                "fromto": "both",
+                "multiple_number": "",
+                "multiple_from": "",
+                "multiple_to": "",
+                "show_remaining_days": 0
+            },
+            "module": "date"
+        },
+        "full": {
+            "label": "hidden",
+            "type": "date_default",
+            "weight": "3",
+            "settings": {
+                "format_type": "short",
+                "fromto": "both",
+                "multiple_number": "",
+                "multiple_from": "",
+                "multiple_to": "",
+                "show_remaining_days": 0
+            },
+            "module": "date"
+        }
+    }
+}

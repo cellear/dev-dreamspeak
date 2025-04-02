@@ -1,0 +1,53 @@
+{
+    "_config_name": "field.instance.node.gig.field_gig_photos",
+    "field_name": "field_gig_photos",
+    "entity_type": "node",
+    "bundle": "gig",
+    "label": "gig photos - Click for Slideshow",
+    "widget": {
+        "weight": "7",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "bar",
+            "browser_view": "image_library",
+            "preview_image_style": "200px_square"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "gig_photos",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "2MB",
+        "max_dimensions": "",
+        "min_dimensions": "300x300",
+        "alt_field": 1,
+        "title_field": 1,
+        "orientate": 0,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "inline",
+            "type": "colorbox",
+            "weight": "5",
+            "settings": {
+                "colorbox_node_style": "hide",
+                "colorbox_node_style_first": "400_pixels_wide",
+                "colorbox_image_style": "large",
+                "colorbox_gallery": "post",
+                "colorbox_gallery_custom": "",
+                "colorbox_caption": "auto",
+                "colorbox_caption_custom": "",
+                "colorbox_multivalue_index": null
+            },
+            "module": "colorbox"
+        }
+    }
+}

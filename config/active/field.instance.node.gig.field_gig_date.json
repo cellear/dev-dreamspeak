@@ -1,0 +1,50 @@
+{
+    "_config_name": "field.instance.node.gig.field_gig_date",
+    "field_name": "field_gig_date",
+    "entity_type": "node",
+    "bundle": "gig",
+    "label": "Gig Date",
+    "widget": {
+        "weight": "3",
+        "type": "date_text",
+        "module": "date",
+        "active": 1,
+        "settings": {
+            "input_format": "m/d/y",
+            "input_format_custom": "",
+            "year_range": "-3:+3",
+            "increment": 1,
+            "label_position": "none",
+            "text_parts": [],
+            "no_fieldset": 1
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "default_value": "blank",
+        "default_value_code": "",
+        "default_value2": "same",
+        "default_value_code2": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "date_default",
+            "weight": "3",
+            "settings": {
+                "format_type": "long",
+                "multiple_number": "",
+                "multiple_from": "",
+                "multiple_to": "",
+                "fromto": "both",
+                "show_remaining_days": false
+            },
+            "module": "date"
+        }
+    }
+}

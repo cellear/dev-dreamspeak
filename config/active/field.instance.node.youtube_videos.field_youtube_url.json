@@ -1,0 +1,41 @@
+{
+    "_config_name": "field.instance.node.youtube_videos.field_youtube_url",
+    "field_name": "field_youtube_url",
+    "entity_type": "node",
+    "bundle": "youtube_videos",
+    "label": "YouTube URL",
+    "widget": {
+        "weight": "1",
+        "type": "youtube",
+        "module": "youtube",
+        "active": 0,
+        "settings": []
+    },
+    "description": "Paste the URL for the YouTube video here",
+    "required": 1,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "youtube_video",
+            "weight": "0",
+            "settings": {
+                "youtube_size": "420x315",
+                "youtube_width": null,
+                "youtube_height": null,
+                "youtube_autoplay": false,
+                "youtube_loop": false,
+                "youtube_showinfo": false,
+                "youtube_controls": false,
+                "youtube_autohide": false,
+                "youtube_iv_load_policy": false
+            },
+            "module": "youtube"
+        }
+    }
+}

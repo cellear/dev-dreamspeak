@@ -1,0 +1,30 @@
+{
+    "_config_name": "field.instance.node.photos.field_bandmember",
+    "field_name": "field_bandmember",
+    "entity_type": "node",
+    "bundle": "photos",
+    "label": "bandmember (taxonomy tag)",
+    "widget": {
+        "weight": "4",
+        "type": "options_buttons",
+        "module": "options",
+        "active": 1,
+        "settings": []
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "2",
+            "settings": []
+        }
+    }
+}

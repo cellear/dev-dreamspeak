@@ -1,0 +1,65 @@
+{
+    "_config_name": "field.instance.taxonomy_term.gig.field_gig_photos",
+    "field_name": "field_gig_photos",
+    "entity_type": "taxonomy_term",
+    "bundle": "gig",
+    "label": "gig photos - Click for Slideshow",
+    "widget": {
+        "weight": "9",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "bar",
+            "browser_view": "image_library",
+            "preview_image_style": "200px_square"
+        }
+    },
+    "description": "Photos for the gig slide show",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "gig_photos",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "20mb",
+        "max_dimensions": "400x400",
+        "min_dimensions": "",
+        "alt_field": 1,
+        "title_field": 1,
+        "orientate": 1,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "image",
+            "weight": "8",
+            "settings": {
+                "image_style": "",
+                "image_link": "",
+                "image_float": "",
+                "image_load": "auto"
+            },
+            "module": "image"
+        },
+        "full": {
+            "label": "inline",
+            "type": "colorbox",
+            "weight": "1",
+            "settings": {
+                "colorbox_node_style": "hide",
+                "colorbox_node_style_first": "medium",
+                "colorbox_image_style": "large",
+                "colorbox_gallery": "post",
+                "colorbox_gallery_custom": "",
+                "colorbox_caption": "auto",
+                "colorbox_caption_custom": "",
+                "colorbox_multivalue_index": null
+            },
+            "module": "colorbox"
+        }
+    }
+}
